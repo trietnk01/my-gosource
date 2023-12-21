@@ -1,0 +1,13 @@
+yarn.lock
+react-native.config.js
+package.json
+note.txt
+metro.config.js
+Gemfile
+app.json
+.watchmanconfig
+.ruby-version
+.node-version
+.gitignore
+.buckconfig
+views

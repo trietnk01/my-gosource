@@ -1,0 +1,35 @@
+version: "3.9"
+networks:
+  bridge:
+    driver: bridge
+services:
+  mongo:
+    container_name: mongo_my_gosource
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_DATABASE: my_gosource
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: gosource246357
+    ports:
+      - 4200:27017
+    networks:
+      - bridge
+    volumes:
+      - mongo_volume:/data/db
+    restart: unless-stopped
+  redis:
+    image: redis:latest
+    container_name: redis_my_gosource
+    restart: always
+    ports:
+      - 7221:6379
+    command: ["redis-server", "/etc/redis/redis.conf"]
+    volumes:
+      - rediscache_volume:/data
+      - ./redis.conf:/etc/redis/redis.conf
+    networks:
+      - bridge
+volumes:
+  mongo_volume:
+  rediscache_volume:
+# docker compose -p my-gosource up -d
