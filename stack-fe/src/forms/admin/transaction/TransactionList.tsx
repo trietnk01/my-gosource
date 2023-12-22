@@ -35,6 +35,7 @@ import MyPaginationGlobal from "ui-component/MyPaginationGlobal";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import useConfig from "hooks/useConfig";
+import NumberFormat from "react-number-format";
 interface IUser {
 	_id: string;
 	sku: string;
@@ -58,8 +59,9 @@ const TransactionList = () => {
 	const [isLoading, setLoading] = React.useState<boolean>(true);
 	const [selected, setSelected] = React.useState<string[]>([]);
 	const [dateCreated, setDateCreated] = React.useState<Date | null>(new Date());
+	const [price, setPrice] = React.useState<string>("");
 	const isSelected = (id: string) => selected.indexOf(id) !== -1;
-	const loadData = (keyword: string, perpage: number, dateVal: Date | null) => {
+	const loadData = (keyword: string, perpage: number, dateVal: Date | null, price: string) => {
 		let dateCreated = "";
 		if (dateVal) {
 			const txtYear = dateVal.getFullYear().toString();
@@ -67,11 +69,16 @@ const TransactionList = () => {
 			const txtDay = dateVal.getDate().toString().padStart(2, "0");
 			dateCreated = txtYear + "-" + txtMonth + "-" + txtDay;
 		}
+		let realPrice = "";
+		if (price) {
+			realPrice = price.replaceAll(",", "");
+		}
 		axios
 			.get("/transaction/list", {
 				params: {
 					keyword: keyword ? keyword.trim() : undefined,
 					dateCreated: dateCreated ? dateCreated : undefined,
+					price: realPrice ? realPrice : undefined,
 					page: page + 1,
 					perpage
 				}
@@ -103,9 +110,9 @@ const TransactionList = () => {
 			});
 	};
 	const debouncedSearch = React.useRef(
-		debounce((keyword: string) => {
+		debounce((keyword: string, dateCreated: Date | null, price: string) => {
 			mounted = true;
-			loadData(keyword, rowsPerPage, dateCreated);
+			loadData(keyword, rowsPerPage, dateCreated, price);
 		}, 500)
 	).current;
 	React.useEffect(() => {
@@ -114,11 +121,11 @@ const TransactionList = () => {
 		};
 	}, [debouncedSearch]);
 	React.useEffect(() => {
-		loadData(search, rowsPerPage, dateCreated);
+		loadData(search, rowsPerPage, dateCreated, price);
 		return () => {
 			mounted = false;
 		};
-	}, [page, rowsPerPage, dateCreated]);
+	}, [search, page, rowsPerPage, dateCreated, price]);
 	const handleSelectAllClick = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.checked) {
 			const newSelectedId = rows.map((n) => n._id);
@@ -147,7 +154,7 @@ const TransactionList = () => {
 		setPage(0);
 		setLoading(true);
 		setSelected([]);
-		debouncedSearch(strSearch);
+		debouncedSearch(strSearch, dateCreated, price);
 	};
 	const handleChangePage = (val: number) => {
 		setPage(val);
@@ -203,7 +210,7 @@ const TransactionList = () => {
 								close: false
 							})
 						);
-						loadData(search, rowsPerPage, dateCreated);
+						loadData(search, rowsPerPage, dateCreated, price);
 					} else {
 						dispatch(
 							openSnackbar({
@@ -326,18 +333,20 @@ const TransactionList = () => {
 						</LocalizationProvider>
 					</Grid>
 					<Grid item xl={2}>
-						<MyTextField
+						<NumberFormat
 							fullWidth
-							InputProps={{
-								startAdornment: (
-									<InputAdornment position="start">
-										<SearchIcon fontSize="small" />
-									</InputAdornment>
-								)
-							}}
 							placeholder={t("Price").toString()}
-							onChange={handleSearch}
-							value={search}
+							customInput={MyTextField}
+							thousandSeparator={true}
+							value={price}
+							onValueChange={(values, sourceInfo) => {
+								let priceVal = "";
+								if (values && values.formattedValue) {
+									priceVal = values.formattedValue.toString().trim();
+								}
+								setPrice(priceVal);
+							}}
+							className="item-first"
 							size="small"
 						/>
 					</Grid>

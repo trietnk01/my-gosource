@@ -25,6 +25,10 @@ router.get("/list", async (req, res) => {
 				let dateCreated = query.dateCreated;
 				where["dateCreated"] = dateCreated;
 			}
+			if (query.price) {
+				let price = query.price;
+				where["price"] = price;
+			}
 			console.log("where = ", where);
 			total = await transactionModel.find(where).countDocuments();
 			let position = (currentPage - 1) * perpage;
