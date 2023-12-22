@@ -8,6 +8,7 @@ import {
 	Button,
 	Card,
 	Checkbox,
+	Grid,
 	IconButton,
 	InputAdornment,
 	Table,
@@ -31,12 +32,14 @@ import Swal from "sweetalert2";
 import { END_POINT } from "configs";
 import { debounce } from "lodash";
 import MyPaginationGlobal from "ui-component/MyPaginationGlobal";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import useConfig from "hooks/useConfig";
 interface IUser {
 	_id: string;
-	displayName: string;
-	email: string;
-	phone: string;
-	avatar: string;
+	sku: string;
+	dateCreated: string;
+	price: number;
 }
 const PER_PAGE: number = 20;
 const NUMBER_ROWS: number[] = [20, 40, 60, 80, 100];
@@ -45,6 +48,7 @@ const TransactionList = () => {
 	const theme = useTheme();
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
+	const { dateFormat } = useConfig();
 	let mounted: boolean = true;
 	const [page, setPage] = React.useState<number>(0);
 	const [rowsPerPage, setRowsPerPage] = React.useState<number>(PER_PAGE);
@@ -53,12 +57,21 @@ const TransactionList = () => {
 	const [rows, setRows] = React.useState<IUser[]>([]);
 	const [isLoading, setLoading] = React.useState<boolean>(true);
 	const [selected, setSelected] = React.useState<string[]>([]);
+	const [dateCreated, setDateCreated] = React.useState<Date | null>(new Date());
 	const isSelected = (id: string) => selected.indexOf(id) !== -1;
-	const loadData = (keyword: string, perpage: number) => {
+	const loadData = (keyword: string, perpage: number, dateVal: Date | null) => {
+		let dateCreated = "";
+		if (dateVal) {
+			const txtYear = dateVal.getFullYear().toString();
+			const txtMonth = (dateVal.getMonth() + 1).toString().padStart(2, "0");
+			const txtDay = dateVal.getDate().toString().padStart(2, "0");
+			dateCreated = txtYear + "-" + txtMonth + "-" + txtDay;
+		}
 		axios
-			.get("/users/list", {
+			.get("/transaction/list", {
 				params: {
 					keyword: keyword ? keyword.trim() : undefined,
+					dateCreated: dateCreated ? dateCreated : undefined,
 					page: page + 1,
 					perpage
 				}
@@ -92,7 +105,7 @@ const TransactionList = () => {
 	const debouncedSearch = React.useRef(
 		debounce((keyword: string) => {
 			mounted = true;
-			loadData(keyword, rowsPerPage);
+			loadData(keyword, rowsPerPage, dateCreated);
 		}, 500)
 	).current;
 	React.useEffect(() => {
@@ -101,11 +114,11 @@ const TransactionList = () => {
 		};
 	}, [debouncedSearch]);
 	React.useEffect(() => {
-		loadData(search, rowsPerPage);
+		loadData(search, rowsPerPage, dateCreated);
 		return () => {
 			mounted = false;
 		};
-	}, [page, rowsPerPage]);
+	}, [page, rowsPerPage, dateCreated]);
 	const handleSelectAllClick = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.checked) {
 			const newSelectedId = rows.map((n) => n._id);
@@ -145,6 +158,24 @@ const TransactionList = () => {
 		setPage(0);
 		setLoading(true);
 	};
+	const convertDateTime = (dateParam: string) => {
+		let dateVal = "";
+		if (dateParam) {
+			let dateCustom = new Date(dateParam);
+			dateVal =
+				dateCustom.getDate().toString().padStart(2, "0") +
+				"/" +
+				(dateCustom.getMonth() + 1).toString().padStart(2, "0") +
+				"/" +
+				dateCustom.getFullYear();
+		}
+		return dateVal;
+	};
+	const formatCurrency = (number: number) => {
+		return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 })
+			.format(number)
+			.replace("$", "");
+	};
 	const handleDelete = (id: string) => () => {
 		Swal.fire({
 			icon: "warning",
@@ -172,7 +203,7 @@ const TransactionList = () => {
 								close: false
 							})
 						);
-						loadData(search, rowsPerPage);
+						loadData(search, rowsPerPage, dateCreated);
 					} else {
 						dispatch(
 							openSnackbar({
@@ -206,6 +237,9 @@ const TransactionList = () => {
 			}
 		});
 	};
+	const handleDateCreatedChange = (newVal: Date | null) => {
+		setDateCreated(newVal);
+	};
 	const dataTableLoaded = () => {
 		return (
 			<React.Fragment>
@@ -225,17 +259,14 @@ const TransactionList = () => {
 											}}
 										/>
 									</TableCell>
+									<TableCell>{elmt.sku}</TableCell>
+									<TableCell>{convertDateTime(elmt.dateCreated)}</TableCell>
+									<TableCell>{formatCurrency(elmt.price)}</TableCell>
 									<TableCell>
-										<Avatar src={elmt.avatar ? END_POINT.URL_SERVER + `/images/` + elmt.avatar : NoAvatar} />
-									</TableCell>
-									<TableCell>{elmt.email}</TableCell>
-									<TableCell>{elmt.displayName}</TableCell>
-									<TableCell>{elmt.phone}</TableCell>
-									<TableCell>
-										<IconButton color="inherit" onClick={() => navigate(`/admin/user/edit/${elmt._id}`)}>
+										<IconButton color="inherit">
 											<EditTwoToneIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
-										<IconButton color="inherit" onClick={handleDelete(elmt._id)}>
+										<IconButton color="inherit">
 											<DeleteOutlineIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
 									</TableCell>
@@ -263,11 +294,11 @@ const TransactionList = () => {
 				pr={2}
 				borderColor={theme.palette.grey[300]}
 			>
-				{t("User list")}
+				{t("Transaction list")}
 			</Box>
 			<Box p={2}>
-				<Box display="flex" justifyContent="space-between" alignItems="center" height={60}>
-					<Box>
+				<Grid container spacing={1}>
+					<Grid item xl={4}>
 						<MyTextField
 							fullWidth
 							InputProps={{
@@ -277,50 +308,77 @@ const TransactionList = () => {
 									</InputAdornment>
 								)
 							}}
+							placeholder={t("Sku").toString()}
 							onChange={handleSearch}
 							value={search}
 							size="small"
 						/>
-					</Box>
-					<Button variant="contained" startIcon={<AddCircleOutlineIcon />} onClick={() => navigate("/admin/user/add")}>
-						{t("Add user")}
-					</Button>
-				</Box>
-				<TableContainer>
-					<Table>
-						<TableHead>
-							<TableRow>
-								<TableCell width={30}>
-									<Checkbox
-										color="primary"
-										indeterminate={selected.length > 0 && selected.length < rows.length}
-										checked={rows.length > 0 && selected.length === rows.length}
-										onChange={handleSelectAllClick}
-										inputProps={{
-											"aria-label": "select all desserts"
-										}}
-									/>
-								</TableCell>
-								<TableCell width={100}>{t("Avatar")}</TableCell>
-								<TableCell width={300}>Email</TableCell>
-								<TableCell>{t("Fullname")}</TableCell>
-								<TableCell width={400}>{t("Phone")}</TableCell>
-								<TableCell width={150}>{t("Action")}</TableCell>
-							</TableRow>
-						</TableHead>
-						<TableBody>
-							<DataTableLoading isLoading={isLoading} data={dataTableLoaded()} numColumn={6} />
-						</TableBody>
-					</Table>
-				</TableContainer>
-				<MyPaginationGlobal
-					numberRowsArr={NUMBER_ROWS}
-					rowsPerPage={rowsPerPage}
-					page={page}
-					totalRow={totalItem}
-					handleChangePage={handleChangePage}
-					handleChangeRowsPerPage={handleChangeRowsPerPage}
-				/>
+					</Grid>
+					<Grid item xl={2}>
+						<LocalizationProvider dateAdapter={AdapterDateFns}>
+							<DatePicker
+								value={dateCreated}
+								onChange={handleDateCreatedChange}
+								renderInput={(props) => <MyTextField size="small" fullWidth {...props} />}
+								inputFormat={dateFormat}
+								mask="__/__/____"
+							/>
+						</LocalizationProvider>
+					</Grid>
+					<Grid item xl={2}>
+						<MyTextField
+							fullWidth
+							InputProps={{
+								startAdornment: (
+									<InputAdornment position="start">
+										<SearchIcon fontSize="small" />
+									</InputAdornment>
+								)
+							}}
+							placeholder={t("Price").toString()}
+							onChange={handleSearch}
+							value={search}
+							size="small"
+						/>
+					</Grid>
+					<Grid item xs={4}></Grid>
+					<Grid item xs={12}>
+						<TableContainer>
+							<Table>
+								<TableHead>
+									<TableRow>
+										<TableCell width={30}>
+											<Checkbox
+												color="primary"
+												indeterminate={selected.length > 0 && selected.length < rows.length}
+												checked={rows.length > 0 && selected.length === rows.length}
+												onChange={handleSelectAllClick}
+												inputProps={{
+													"aria-label": "select all desserts"
+												}}
+											/>
+										</TableCell>
+										<TableCell>{t("Sku")}</TableCell>
+										<TableCell>{t("Date created")}</TableCell>
+										<TableCell>{t("Price")}</TableCell>
+										<TableCell width={200}>{t("Action")}</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									<DataTableLoading isLoading={isLoading} data={dataTableLoaded()} numColumn={5} />
+								</TableBody>
+							</Table>
+						</TableContainer>
+						<MyPaginationGlobal
+							numberRowsArr={NUMBER_ROWS}
+							rowsPerPage={rowsPerPage}
+							page={page}
+							totalRow={totalItem}
+							handleChangePage={handleChangePage}
+							handleChangeRowsPerPage={handleChangeRowsPerPage}
+						/>
+					</Grid>
+				</Grid>
 			</Box>
 		</Card>
 	);

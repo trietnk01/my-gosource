@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const AuthorSchema = new mongoose.Schema({
+const authorSchema = new mongoose.Schema({
 	email: {
 		type: String
 	},
@@ -19,5 +19,5 @@ const AuthorSchema = new mongoose.Schema({
 		type: String
 	}
 });
-const model = mongoose.model("users", AuthorSchema);
+const model = mongoose.model("users", authorSchema);
 module.exports = model;

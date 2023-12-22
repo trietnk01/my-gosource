@@ -33,7 +33,7 @@ router.post("/login", async (req, res) => {
 				expiresIn: "10h"
 			});
 			await usersModel.updateOne({ _id: userId }, { token });
-			userItem = await usersModel.findOne({ _id: userId });
+			userItem = await usersModel.findById(userId);
 		}
 	} catch (err) {
 		msg = err.message;
@@ -91,35 +91,41 @@ router.get("/list", async (req, res) => {
 	let items = [];
 	let total = 0;
 	try {
-		const query = Object.assign({}, req.query);
-		const perpage = query.perpage ? parseInt(query.perpage) : 20;
-		const currentPage = query.page ? parseInt(query.page) : 1;
-		const keyword = query.keyword ? query.keyword : "";
-		let where = {};
-		if (keyword) {
-			where["displayName"] = { $regex: new RegExp(keyword), $options: "i" };
-		}
-		total = await usersModel.find(where).countDocuments();
-		let position = (currentPage - 1) * perpage;
-		items = await usersModel.aggregate([
-			{
-				$match: where
-			},
-			{
-				$project: {
-					email: 1,
-					displayName: 1,
-					phone: 1,
-					avatar: 1
-				}
-			},
-			{
-				$skip: position
-			},
-			{
-				$limit: perpage
+		const valid = await checkAuthorization(req);
+		if (!valid) {
+			status = false;
+			msg = "Invalid token";
+		} else {
+			const query = Object.assign({}, req.query);
+			const perpage = query.perpage ? parseInt(query.perpage) : 20;
+			const currentPage = query.page ? parseInt(query.page) : 1;
+			const keyword = query.keyword ? query.keyword : "";
+			let where = {};
+			if (keyword) {
+				where["displayName"] = { $regex: new RegExp(keyword), $options: "i" };
 			}
-		]);
+			total = await usersModel.find(where).countDocuments();
+			let position = (currentPage - 1) * perpage;
+			items = await usersModel.aggregate([
+				{
+					$match: where
+				},
+				{
+					$project: {
+						email: 1,
+						displayName: 1,
+						phone: 1,
+						avatar: 1
+					}
+				},
+				{
+					$skip: position
+				},
+				{
+					$limit: perpage
+				}
+			]);
+		}
 	} catch (err) {
 		msg = err.message;
 		status = false;
@@ -131,19 +137,25 @@ router.post("/create", uploadImage.single("avatar"), async (req, res) => {
 	let msg = "";
 	let insertId = "";
 	try {
-		const item = Object.assign({}, req.body);
-		if (req.file && req.file.originalname) {
-			item.avatar = req.file.originalname;
-		}
-		const dataMatched = await usersModel.find({ email: item.email });
-		if (dataMatched && dataMatched.length > 0) {
+		const valid = await checkAuthorization(req);
+		if (!valid) {
 			status = false;
-			msg = "User is exist";
-		}
-		if (status) {
-			let model = new usersModel({ email: item.email, displayName: item.displayName, password: item.password, phone: item.phone, avatar: item.avatar });
-			const itemCreated = await model.save();
-			insertId = itemCreated._id;
+			msg = "Invalid token";
+		} else {
+			const item = Object.assign({}, req.body);
+			if (req.file && req.file.originalname) {
+				item.avatar = req.file.originalname;
+			}
+			const dataMatched = await usersModel.find({ email: item.email });
+			if (dataMatched && dataMatched.length > 0) {
+				status = false;
+				msg = "User is exist";
+			}
+			if (status) {
+				let model = new usersModel({ email: item.email, displayName: item.displayName, password: item.password, phone: item.phone, avatar: item.avatar });
+				const itemCreated = await model.save();
+				insertId = itemCreated._id;
+			}
 		}
 	} catch (err) {
 		msg = err.message;
@@ -155,24 +167,30 @@ router.patch("/update/:id", uploadImage.single("avatar"), async (req, res) => {
 	let status = true;
 	let msg = "";
 	try {
-		let item = Object.assign({}, req.body);
-		const id = req.params.id ? req.params.id : "";
-		if (req.file && req.file.originalname) {
-			item.avatar = req.file.originalname;
-		}
-		const dataMatched = await usersModel.find({ email: item.email, _id: { $ne: id } });
-		if (dataMatched && dataMatched.length > 0) {
+		const valid = await checkAuthorization(req);
+		if (!valid) {
 			status = false;
-			msg = "User is exist";
-		}
-		if (status) {
-			await usersModel.updateOne({ _id: ObjectId(id) }, item);
-			const dataFindById = await usersModel.findOne({ _id: ObjectId(id) });
-			const oldAvatar = dataFindById.avatar ? dataFindById.avatar : null;
-			if (item.removed_avatar && item.removed_avatar === "true" && oldAvatar) {
-				const avatarPath = path.join(__IMAGES, oldAvatar);
-				if (fs.existsSync(avatarPath)) {
-					await fs.unlink(avatarPath);
+			msg = "Invalid token";
+		} else {
+			let item = Object.assign({}, req.body);
+			const id = req.params.id ? req.params.id : "";
+			if (req.file && req.file.originalname) {
+				item.avatar = req.file.originalname;
+			}
+			const dataMatched = await usersModel.find({ email: item.email, _id: { $ne: id } });
+			if (dataMatched && dataMatched.length > 0) {
+				status = false;
+				msg = "User is exist";
+			}
+			if (status) {
+				await usersModel.updateOne({ _id: ObjectId(id) }, item);
+				const dataFindById = await usersModel.findOne({ _id: ObjectId(id) });
+				const oldAvatar = dataFindById.avatar ? dataFindById.avatar : null;
+				if (item.removed_avatar && item.removed_avatar === "true" && oldAvatar) {
+					const avatarPath = path.join(__IMAGES, oldAvatar);
+					if (fs.existsSync(avatarPath)) {
+						await fs.unlink(avatarPath);
+					}
 				}
 			}
 		}
