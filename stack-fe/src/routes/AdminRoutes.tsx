@@ -8,6 +8,8 @@ const MainLayout = Loadable(lazy(() => import("layout/MainLayout")));
 const Dashboard = Loadable(lazy(() => import("forms/admin/Dashboard")));
 const UserList = Loadable(lazy(() => import("forms/admin/user/UserList")));
 const UserFrm = Loadable(lazy(() => import("forms/admin/user/UserFrm")));
+const TransactionList = Loadable(lazy(() => import("forms/admin/transaction/TransactionList")));
+const TransactionFrm = Loadable(lazy(() => import("forms/admin/transaction/TransactionFrm")));
 const AdminDenied = Loadable(lazy(() => import("forms/admin/AdminDenied")));
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -41,6 +43,23 @@ const AdminRoutes = {
 				{
 					path: "edit/:id",
 					element: <UserFrm />
+				}
+			]
+		},
+		{
+			path: "admin/transaction",
+			children: [
+				{
+					path: "list",
+					element: <TransactionList />
+				},
+				{
+					path: "add",
+					element: <TransactionFrm />
+				},
+				{
+					path: "edit/:id",
+					element: <TransactionFrm />
 				}
 			]
 		}

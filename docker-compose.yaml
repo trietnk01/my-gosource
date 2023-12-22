@@ -3,6 +3,17 @@ networks:
   bridge:
     driver: bridge
 services:
+  nginx:
+    container_name: nginx_my_gosource
+    restart: always
+    build:
+      context: ./stack-fe
+    ports:
+      - 3000:80
+    networks:
+      - bridge
+    volumes:
+      - ./nginx/config/default.conf:/etc/nginx/conf.d/default.conf
   mongo:
     container_name: mongo_my_gosource
     image: mongo:latest
@@ -17,6 +28,16 @@ services:
     volumes:
       - mongo_volume:/data/db
     restart: unless-stopped
+  backend:
+    depends_on:
+      - mongo
+    container_name: backend_my_gosource
+    build:
+      context: ./stack-be
+    ports:
+      - 7000:8000
+    networks:
+      - bridge
   redis:
     image: redis:latest
     container_name: redis_my_gosource

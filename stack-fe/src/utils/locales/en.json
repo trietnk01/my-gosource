@@ -38,5 +38,6 @@
 	"Type a message": "Type a message",
 	"Connected": "Connected",
 	"Disconnected": "Disconnected",
-	"Student": "Student"
+	"Student": "Student",
+	"Transaction": "Transaction"
 }

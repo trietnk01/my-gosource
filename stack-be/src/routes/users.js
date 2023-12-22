@@ -76,7 +76,7 @@ router.post("/logout", async (req, res) => {
 			msg = "Invalid token";
 		} else {
 			let body = Object.assign({}, req.body);
-			const userId = ObjectId(body.userId);
+			const userId = body.userId;
 			await usersModel.updateOne({ _id: userId }, { token: null });
 		}
 	} catch (err) {
