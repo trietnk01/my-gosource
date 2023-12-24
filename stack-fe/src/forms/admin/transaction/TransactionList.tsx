@@ -3,7 +3,6 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import EditTwoToneIcon from "@mui/icons-material/EditTwoTone";
 import SearchIcon from "@mui/icons-material/Search";
 import {
-	Avatar,
 	Box,
 	Button,
 	Card,
@@ -19,28 +18,26 @@ import {
 	TableRow,
 	useTheme
 } from "@mui/material";
-import { MyTextField } from "control";
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "store";
-import axios from "utils/axios";
-import { openSnackbar } from "store/slices/snackbar";
-import { DataTableLoading } from "components";
-import NoAvatar from "assets/images/no-avatar.jpg";
-import Swal from "sweetalert2";
-import { END_POINT } from "configs";
-import { debounce } from "lodash";
-import MyPaginationGlobal from "ui-component/MyPaginationGlobal";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { DataTableLoading } from "components";
+import { MyTextField } from "control";
 import useConfig from "hooks/useConfig";
+import { debounce } from "lodash";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import NumberFormat from "react-number-format";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "store";
+import { openSnackbar } from "store/slices/snackbar";
+import Swal from "sweetalert2";
+import MyPaginationGlobal from "ui-component/MyPaginationGlobal";
+import axios from "utils/axios";
 interface IUser {
 	_id: string;
 	sku: string;
 	dateCreated: string;
-	price: number;
+	amount: number;
 }
 const PER_PAGE: number = 20;
 const NUMBER_ROWS: number[] = [20, 40, 60, 80, 100];
@@ -58,10 +55,10 @@ const TransactionList = () => {
 	const [rows, setRows] = React.useState<IUser[]>([]);
 	const [isLoading, setLoading] = React.useState<boolean>(true);
 	const [selected, setSelected] = React.useState<string[]>([]);
-	const [dateCreated, setDateCreated] = React.useState<Date | null>(new Date());
-	const [price, setPrice] = React.useState<string>("");
+	const [dateCreated, setDateCreated] = React.useState<Date | null>(null);
+	const [amount, setAmount] = React.useState<string>("");
 	const isSelected = (id: string) => selected.indexOf(id) !== -1;
-	const loadData = (keyword: string, perpage: number, dateVal: Date | null, price: string) => {
+	const loadData = (keyword: string, perpage: number, dateVal: Date | null, amount: string) => {
 		let dateCreated = "";
 		if (dateVal) {
 			const txtYear = dateVal.getFullYear().toString();
@@ -69,16 +66,16 @@ const TransactionList = () => {
 			const txtDay = dateVal.getDate().toString().padStart(2, "0");
 			dateCreated = txtYear + "-" + txtMonth + "-" + txtDay;
 		}
-		let realPrice = "";
-		if (price) {
-			realPrice = price.replaceAll(",", "");
+		let realAmount = "";
+		if (amount) {
+			realAmount = amount.replaceAll(",", "");
 		}
 		axios
 			.get("/transaction/list", {
 				params: {
 					keyword: keyword ? keyword.trim() : undefined,
 					dateCreated: dateCreated ? dateCreated : undefined,
-					price: realPrice ? realPrice : undefined,
+					amount: realAmount ? realAmount : undefined,
 					page: page + 1,
 					perpage
 				}
@@ -110,9 +107,9 @@ const TransactionList = () => {
 			});
 	};
 	const debouncedSearch = React.useRef(
-		debounce((keyword: string, dateCreated: Date | null, price: string) => {
+		debounce((keyword: string, dateCreated: Date | null, amount: string) => {
 			mounted = true;
-			loadData(keyword, rowsPerPage, dateCreated, price);
+			loadData(keyword, rowsPerPage, dateCreated, amount);
 		}, 500)
 	).current;
 	React.useEffect(() => {
@@ -121,11 +118,11 @@ const TransactionList = () => {
 		};
 	}, [debouncedSearch]);
 	React.useEffect(() => {
-		loadData(search, rowsPerPage, dateCreated, price);
+		loadData(search, rowsPerPage, dateCreated, amount);
 		return () => {
 			mounted = false;
 		};
-	}, [search, page, rowsPerPage, dateCreated, price]);
+	}, [search, page, rowsPerPage, dateCreated, amount]);
 	const handleSelectAllClick = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.checked) {
 			const newSelectedId = rows.map((n) => n._id);
@@ -154,7 +151,7 @@ const TransactionList = () => {
 		setPage(0);
 		setLoading(true);
 		setSelected([]);
-		debouncedSearch(strSearch, dateCreated, price);
+		debouncedSearch(strSearch, dateCreated, amount);
 	};
 	const handleChangePage = (val: number) => {
 		setPage(val);
@@ -210,7 +207,7 @@ const TransactionList = () => {
 								close: false
 							})
 						);
-						loadData(search, rowsPerPage, dateCreated, price);
+						loadData(search, rowsPerPage, dateCreated, amount);
 					} else {
 						dispatch(
 							openSnackbar({
@@ -268,12 +265,12 @@ const TransactionList = () => {
 									</TableCell>
 									<TableCell>{elmt.sku}</TableCell>
 									<TableCell>{convertDateTime(elmt.dateCreated)}</TableCell>
-									<TableCell>{formatCurrency(elmt.price)}</TableCell>
+									<TableCell>{formatCurrency(elmt.amount)}</TableCell>
 									<TableCell>
-										<IconButton color="inherit">
+										<IconButton color="inherit" onClick={() => navigate(`/admin/transaction/edit/${elmt._id}`)}>
 											<EditTwoToneIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
-										<IconButton color="inherit">
+										<IconButton color="inherit" onClick={handleDelete(elmt._id)}>
 											<DeleteOutlineIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
 									</TableCell>
@@ -286,6 +283,13 @@ const TransactionList = () => {
 				)}
 			</React.Fragment>
 		);
+	};
+	const handleAmountChange = (values: any, sourceInfo: any) => {
+		let amountVal = "";
+		if (values && values.formattedValue) {
+			amountVal = values.formattedValue.toString().trim();
+		}
+		setAmount(amountVal);
 	};
 	return (
 		<Card variant="outlined">
@@ -335,22 +339,20 @@ const TransactionList = () => {
 					<Grid item xl={2}>
 						<NumberFormat
 							fullWidth
-							placeholder={t("Price").toString()}
+							placeholder={t("Amount").toString()}
 							customInput={MyTextField}
 							thousandSeparator={true}
-							value={price}
-							onValueChange={(values, sourceInfo) => {
-								let priceVal = "";
-								if (values && values.formattedValue) {
-									priceVal = values.formattedValue.toString().trim();
-								}
-								setPrice(priceVal);
-							}}
+							value={amount}
+							onValueChange={handleAmountChange}
 							className="item-first"
 							size="small"
 						/>
 					</Grid>
-					<Grid item xs={4}></Grid>
+					<Grid item xs={4}>
+						<Button variant="contained" startIcon={<AddCircleOutlineIcon />} onClick={() => navigate("/admin/transaction/add")}>
+							{t("Add transaction")}
+						</Button>
+					</Grid>
 					<Grid item xs={12}>
 						<TableContainer>
 							<Table>
@@ -369,7 +371,7 @@ const TransactionList = () => {
 										</TableCell>
 										<TableCell>{t("Sku")}</TableCell>
 										<TableCell>{t("Date created")}</TableCell>
-										<TableCell>{t("Price")}</TableCell>
+										<TableCell>{t("Amount")}</TableCell>
 										<TableCell width={200}>{t("Action")}</TableCell>
 									</TableRow>
 								</TableHead>
