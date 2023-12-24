@@ -29,6 +29,7 @@ router.get(
 			let amount = query.amount;
 			where["amount"] = parseInt(amount);
 		}
+		// let a=1;
 		total = await transactionModel.find(where).countDocuments();
 		position = (currentPage - 1) * perpage;
 		items = await transactionModel.aggregate([
