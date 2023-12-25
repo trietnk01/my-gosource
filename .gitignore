@@ -1,1 +1,7 @@
+/stack-fe/node_modules
+/stack-fe/build
+
+/stack-be/node_modules
+/stack-be/build
+
 .vscode/launch.json
