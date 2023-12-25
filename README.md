@@ -1,6 +1,6 @@
 # 1. cd my-gosource
 
-# 2. Press code. to open Vscode
+# 2. Press code . to open Vscode
 
 # 3. docker compose -p my-gosource up -d
 
