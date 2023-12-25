@@ -35,10 +35,7 @@ services:
     build:
       context: ./stack-be
     ports:
-      - 8000:8000
-    environment:
-      - DATABASE_PORT=4200
-      - HOST=host.docker.internal
+      - 7000:8000
     networks:
       - bridge
   redis:

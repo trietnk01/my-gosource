@@ -3,7 +3,7 @@ var router = express.Router();
 var asyncHandler = require("@middleware/async");
 var checkAuth = require("@middleware/auth");
 var transactionModel = require("@models/transaction");
-var redisClient = require("@helpers/redisClient");
+// var redisClient = require("@helpers/redisClient");
 router.get(
 	"/list",
 	checkAuth,
@@ -49,13 +49,13 @@ router.get(
 				$limit: perpage
 			}
 		]);
-		const key = `transaction-${perpage}-${currentPage}`;
-		let dataCached = await redisClient.get(key);
-		if (dataCached) {
-			items = JSON.parse(dataCached);
-		} else {
-			await redisClient.set(key, JSON.stringify(items));
-		}
+		// const key = `transaction-${perpage}-${currentPage}`;
+		// let dataCached = await redisClient.get(key);
+		// if (dataCached) {
+		// 	items = JSON.parse(dataCached);
+		// } else {
+		// 	await redisClient.set(key, JSON.stringify(items));
+		// }
 		res.status(200).json({ status, msg, items, total });
 	})
 );

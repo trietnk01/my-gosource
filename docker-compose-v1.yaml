@@ -34,11 +34,12 @@ services:
     container_name: backend_my_gosource
     build:
       context: ./stack-be
-    ports:
-      - 8000:8000
     environment:
-      - DATABASE_PORT=4200
-      - HOST=host.docker.internal
+      - HOST=mongo
+    links:
+      - mongo
+    expose:
+      - "8000"
     networks:
       - bridge
   redis:

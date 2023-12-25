@@ -1,0 +1,7248 @@
+/*
+ Navicat MongoDB Data Transfer
+
+ Source Server         : My Gosource
+ Source Server Type    : MongoDB
+ Source Server Version : 70004 (7.0.4)
+ Source Host           : localhost:4200
+ Source Schema         : my_gosource
+
+ Target Server Type    : MongoDB
+ Target Server Version : 70004 (7.0.4)
+ File Encoding         : 65001
+
+ Date: 25/12/2023 15:04:11
+*/
+
+
+// ----------------------------
+// Collection structure for transactions
+// ----------------------------
+db.getCollection("transactions").drop();
+db.createCollection("transactions");
+
+// ----------------------------
+// Documents of transactions
+// ----------------------------
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526104"),
+    sku: "TRANS000001",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("900000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526106"),
+    sku: "TRANS000002",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("200000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526108"),
+    sku: "TRANS000003",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("300000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52610a"),
+    sku: "TRANS000004",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("400000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52610c"),
+    sku: "TRANS000005",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("500000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52610e"),
+    sku: "TRANS000006",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("600000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526110"),
+    sku: "TRANS000007",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("700000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526112"),
+    sku: "TRANS000008",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("800000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526114"),
+    sku: "TRANS000009",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("900000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526116"),
+    sku: "TRANS000010",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("100000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526118"),
+    sku: "TRANS000011",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("110000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52611a"),
+    sku: "TRANS000012",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("120000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52611c"),
+    sku: "TRANS000013",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("130000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52611e"),
+    sku: "TRANS000014",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("140000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526120"),
+    sku: "TRANS000015",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("150000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526122"),
+    sku: "TRANS000016",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("160000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526124"),
+    sku: "TRANS000017",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("170000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526126"),
+    sku: "TRANS000018",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("180000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526128"),
+    sku: "TRANS000019",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("190000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52612a"),
+    sku: "TRANS000020",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("200000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52612c"),
+    sku: "TRANS000021",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("210000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52612e"),
+    sku: "TRANS000022",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("220000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526130"),
+    sku: "TRANS000023",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("230000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526132"),
+    sku: "TRANS000024",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("240000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526134"),
+    sku: "TRANS000025",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("250000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526136"),
+    sku: "TRANS000026",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("260000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526138"),
+    sku: "TRANS000027",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("270000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52613a"),
+    sku: "TRANS000028",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("280000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52613c"),
+    sku: "TRANS000029",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("290000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52613e"),
+    sku: "TRANS000030",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("300000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526140"),
+    sku: "TRANS000031",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("310000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526142"),
+    sku: "TRANS000032",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("320000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526144"),
+    sku: "TRANS000033",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("330000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526146"),
+    sku: "TRANS000034",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("340000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526148"),
+    sku: "TRANS000035",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("350000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52614a"),
+    sku: "TRANS000036",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("360000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52614c"),
+    sku: "TRANS000037",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("370000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52614e"),
+    sku: "TRANS000038",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("380000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526150"),
+    sku: "TRANS000039",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("390000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526152"),
+    sku: "TRANS000040",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("400000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526154"),
+    sku: "TRANS000041",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("410000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526156"),
+    sku: "TRANS000042",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("420000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526158"),
+    sku: "TRANS000043",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("430000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52615a"),
+    sku: "TRANS000044",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("440000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52615c"),
+    sku: "TRANS000045",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("450000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52615e"),
+    sku: "TRANS000046",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("460000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526160"),
+    sku: "TRANS000047",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("470000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526162"),
+    sku: "TRANS000048",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("480000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526164"),
+    sku: "TRANS000049",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("490000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526166"),
+    sku: "TRANS000050",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("500000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526168"),
+    sku: "TRANS000051",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("510000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52616a"),
+    sku: "TRANS000052",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("520000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52616c"),
+    sku: "TRANS000053",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("530000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52616e"),
+    sku: "TRANS000054",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("540000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526170"),
+    sku: "TRANS000055",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("550000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526172"),
+    sku: "TRANS000056",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("560000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526174"),
+    sku: "TRANS000057",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("570000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526176"),
+    sku: "TRANS000058",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("580000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526178"),
+    sku: "TRANS000059",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("590000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52617a"),
+    sku: "TRANS000060",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("600000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52617c"),
+    sku: "TRANS000061",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("610000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52617e"),
+    sku: "TRANS000062",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("620000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526180"),
+    sku: "TRANS000063",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("630000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526182"),
+    sku: "TRANS000064",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("640000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526184"),
+    sku: "TRANS000065",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("650000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526186"),
+    sku: "TRANS000066",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("660000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526188"),
+    sku: "TRANS000067",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("670000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52618a"),
+    sku: "TRANS000068",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("680000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52618c"),
+    sku: "TRANS000069",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("690000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52618e"),
+    sku: "TRANS000070",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("700000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526190"),
+    sku: "TRANS000071",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("710000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526192"),
+    sku: "TRANS000072",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("720000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526194"),
+    sku: "TRANS000073",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("730000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526196"),
+    sku: "TRANS000074",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("740000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c526198"),
+    sku: "TRANS000075",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("750000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52619a"),
+    sku: "TRANS000076",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("760000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52619c"),
+    sku: "TRANS000077",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("770000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c52619e"),
+    sku: "TRANS000078",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("780000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c5261a0"),
+    sku: "TRANS000079",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("790000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c5261a2"),
+    sku: "TRANS000080",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("800000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c5261a4"),
+    sku: "TRANS000081",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("810000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883531a50e46114c5261a6"),
+    sku: "TRANS000082",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("820000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261a8"),
+    sku: "TRANS000083",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("830000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261aa"),
+    sku: "TRANS000084",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("840000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ac"),
+    sku: "TRANS000085",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("850000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ae"),
+    sku: "TRANS000086",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("860000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261b0"),
+    sku: "TRANS000087",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("870000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261b2"),
+    sku: "TRANS000088",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("880000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261b4"),
+    sku: "TRANS000089",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("890000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261b6"),
+    sku: "TRANS000090",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("900000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261b8"),
+    sku: "TRANS000091",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("910000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ba"),
+    sku: "TRANS000092",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("920000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261bc"),
+    sku: "TRANS000093",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("930000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261be"),
+    sku: "TRANS000094",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("940000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261c0"),
+    sku: "TRANS000095",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("950000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261c2"),
+    sku: "TRANS000096",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("960000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261c4"),
+    sku: "TRANS000097",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("970000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261c6"),
+    sku: "TRANS000098",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("980000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261c8"),
+    sku: "TRANS000099",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("990000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ca"),
+    sku: "TRANS000100",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("100000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261cc"),
+    sku: "TRANS000101",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("101000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ce"),
+    sku: "TRANS000102",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("102000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261d0"),
+    sku: "TRANS000103",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("103000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261d2"),
+    sku: "TRANS000104",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("104000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261d4"),
+    sku: "TRANS000105",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("105000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261d6"),
+    sku: "TRANS000106",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("106000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261d8"),
+    sku: "TRANS000107",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("107000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261da"),
+    sku: "TRANS000108",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("108000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261dc"),
+    sku: "TRANS000109",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("109000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261de"),
+    sku: "TRANS000110",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("110000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261e0"),
+    sku: "TRANS000111",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("111000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261e2"),
+    sku: "TRANS000112",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("112000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261e4"),
+    sku: "TRANS000113",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("113000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261e6"),
+    sku: "TRANS000114",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("114000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261e8"),
+    sku: "TRANS000115",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("115000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ea"),
+    sku: "TRANS000116",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("116000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ec"),
+    sku: "TRANS000117",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("117000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261ee"),
+    sku: "TRANS000118",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("118000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261f0"),
+    sku: "TRANS000119",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("119000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261f2"),
+    sku: "TRANS000120",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("120000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261f4"),
+    sku: "TRANS000121",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("121000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261f6"),
+    sku: "TRANS000122",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("122000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261f8"),
+    sku: "TRANS000123",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("123000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261fa"),
+    sku: "TRANS000124",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("124000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261fc"),
+    sku: "TRANS000125",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("125000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5261fe"),
+    sku: "TRANS000126",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("126000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526200"),
+    sku: "TRANS000127",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("127000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526202"),
+    sku: "TRANS000128",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("128000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526204"),
+    sku: "TRANS000129",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("129000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526206"),
+    sku: "TRANS000130",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("130000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526208"),
+    sku: "TRANS000131",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("131000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52620a"),
+    sku: "TRANS000132",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("132000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52620c"),
+    sku: "TRANS000133",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("133000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52620e"),
+    sku: "TRANS000134",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("134000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526210"),
+    sku: "TRANS000135",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("135000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526212"),
+    sku: "TRANS000136",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("136000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526214"),
+    sku: "TRANS000137",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("137000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526216"),
+    sku: "TRANS000138",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("138000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526218"),
+    sku: "TRANS000139",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("139000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52621a"),
+    sku: "TRANS000140",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("140000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52621c"),
+    sku: "TRANS000141",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("141000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52621e"),
+    sku: "TRANS000142",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("142000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526220"),
+    sku: "TRANS000143",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("143000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526222"),
+    sku: "TRANS000144",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("144000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526224"),
+    sku: "TRANS000145",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("145000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526226"),
+    sku: "TRANS000146",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("146000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526228"),
+    sku: "TRANS000147",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("147000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52622a"),
+    sku: "TRANS000148",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("148000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52622c"),
+    sku: "TRANS000149",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("149000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52622e"),
+    sku: "TRANS000150",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("150000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526230"),
+    sku: "TRANS000151",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("151000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526232"),
+    sku: "TRANS000152",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("152000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526234"),
+    sku: "TRANS000153",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("153000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526236"),
+    sku: "TRANS000154",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("154000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526238"),
+    sku: "TRANS000155",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("155000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52623a"),
+    sku: "TRANS000156",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("156000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52623c"),
+    sku: "TRANS000157",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("157000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52623e"),
+    sku: "TRANS000158",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("158000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526240"),
+    sku: "TRANS000159",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("159000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526242"),
+    sku: "TRANS000160",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("160000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526244"),
+    sku: "TRANS000161",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("161000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526246"),
+    sku: "TRANS000162",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("162000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526248"),
+    sku: "TRANS000163",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("163000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52624a"),
+    sku: "TRANS000164",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("164000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52624c"),
+    sku: "TRANS000165",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("165000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52624e"),
+    sku: "TRANS000166",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("166000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526250"),
+    sku: "TRANS000167",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("167000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526252"),
+    sku: "TRANS000168",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("168000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526254"),
+    sku: "TRANS000169",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("169000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526256"),
+    sku: "TRANS000170",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("170000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526258"),
+    sku: "TRANS000171",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("171000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52625a"),
+    sku: "TRANS000172",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("172000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52625c"),
+    sku: "TRANS000173",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("173000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52625e"),
+    sku: "TRANS000174",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("174000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526260"),
+    sku: "TRANS000175",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("175000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526262"),
+    sku: "TRANS000176",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("176000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526264"),
+    sku: "TRANS000177",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("177000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526266"),
+    sku: "TRANS000178",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("178000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526268"),
+    sku: "TRANS000179",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("179000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52626a"),
+    sku: "TRANS000180",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("180000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52626c"),
+    sku: "TRANS000181",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("181000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52626e"),
+    sku: "TRANS000182",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("182000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526270"),
+    sku: "TRANS000183",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("183000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526272"),
+    sku: "TRANS000184",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("184000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526274"),
+    sku: "TRANS000185",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("185000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526276"),
+    sku: "TRANS000186",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("186000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526278"),
+    sku: "TRANS000187",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("187000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52627a"),
+    sku: "TRANS000188",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("188000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52627c"),
+    sku: "TRANS000189",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("189000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52627e"),
+    sku: "TRANS000190",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("190000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526280"),
+    sku: "TRANS000191",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("191000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526282"),
+    sku: "TRANS000192",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("192000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526284"),
+    sku: "TRANS000193",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("193000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526286"),
+    sku: "TRANS000194",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("194000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526288"),
+    sku: "TRANS000195",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("195000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52628a"),
+    sku: "TRANS000196",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("196000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52628c"),
+    sku: "TRANS000197",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("197000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52628e"),
+    sku: "TRANS000198",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("198000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526290"),
+    sku: "TRANS000199",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("199000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526292"),
+    sku: "TRANS000200",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("200000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526294"),
+    sku: "TRANS000201",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("201000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526296"),
+    sku: "TRANS000202",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("202000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526298"),
+    sku: "TRANS000203",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("203000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52629a"),
+    sku: "TRANS000204",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("204000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52629c"),
+    sku: "TRANS000205",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("205000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52629e"),
+    sku: "TRANS000206",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("206000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262a0"),
+    sku: "TRANS000207",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("207000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262a2"),
+    sku: "TRANS000208",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("208000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262a4"),
+    sku: "TRANS000209",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("209000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262a6"),
+    sku: "TRANS000210",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("210000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262a8"),
+    sku: "TRANS000211",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("211000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262aa"),
+    sku: "TRANS000212",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("212000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ac"),
+    sku: "TRANS000213",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("213000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ae"),
+    sku: "TRANS000214",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("214000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262b0"),
+    sku: "TRANS000215",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("215000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262b2"),
+    sku: "TRANS000216",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("216000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262b4"),
+    sku: "TRANS000217",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("217000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262b6"),
+    sku: "TRANS000218",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("218000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262b8"),
+    sku: "TRANS000219",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("219000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ba"),
+    sku: "TRANS000220",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("220000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262bc"),
+    sku: "TRANS000221",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("221000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262be"),
+    sku: "TRANS000222",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("222000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262c0"),
+    sku: "TRANS000223",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("223000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262c2"),
+    sku: "TRANS000224",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("224000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262c4"),
+    sku: "TRANS000225",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("225000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262c6"),
+    sku: "TRANS000226",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("226000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262c8"),
+    sku: "TRANS000227",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("227000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ca"),
+    sku: "TRANS000228",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("228000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262cc"),
+    sku: "TRANS000229",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("229000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ce"),
+    sku: "TRANS000230",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("230000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262d0"),
+    sku: "TRANS000231",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("231000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262d2"),
+    sku: "TRANS000232",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("232000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262d4"),
+    sku: "TRANS000233",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("233000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262d6"),
+    sku: "TRANS000234",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("234000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262d8"),
+    sku: "TRANS000235",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("235000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262da"),
+    sku: "TRANS000236",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("236000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262dc"),
+    sku: "TRANS000237",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("237000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262de"),
+    sku: "TRANS000238",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("238000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262e0"),
+    sku: "TRANS000239",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("239000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262e2"),
+    sku: "TRANS000240",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("240000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262e4"),
+    sku: "TRANS000241",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("241000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262e6"),
+    sku: "TRANS000242",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("242000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262e8"),
+    sku: "TRANS000243",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("243000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ea"),
+    sku: "TRANS000244",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("244000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ec"),
+    sku: "TRANS000245",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("245000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262ee"),
+    sku: "TRANS000246",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("246000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262f0"),
+    sku: "TRANS000247",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("247000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262f2"),
+    sku: "TRANS000248",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("248000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262f4"),
+    sku: "TRANS000249",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("249000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262f6"),
+    sku: "TRANS000250",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("250000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262f8"),
+    sku: "TRANS000251",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("251000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262fa"),
+    sku: "TRANS000252",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("252000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262fc"),
+    sku: "TRANS000253",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("253000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c5262fe"),
+    sku: "TRANS000254",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("254000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526300"),
+    sku: "TRANS000255",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("255000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526302"),
+    sku: "TRANS000256",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("256000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526304"),
+    sku: "TRANS000257",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("257000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526306"),
+    sku: "TRANS000258",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("258000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526308"),
+    sku: "TRANS000259",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("259000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52630a"),
+    sku: "TRANS000260",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("260000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52630c"),
+    sku: "TRANS000261",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("261000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c52630e"),
+    sku: "TRANS000262",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("262000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526310"),
+    sku: "TRANS000263",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("263000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526312"),
+    sku: "TRANS000264",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("264000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526314"),
+    sku: "TRANS000265",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("265000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883532a50e46114c526316"),
+    sku: "TRANS000266",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("266000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526318"),
+    sku: "TRANS000267",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("267000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52631a"),
+    sku: "TRANS000268",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("268000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52631c"),
+    sku: "TRANS000269",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("269000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52631e"),
+    sku: "TRANS000270",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("270000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526320"),
+    sku: "TRANS000271",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("271000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526322"),
+    sku: "TRANS000272",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("272000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526324"),
+    sku: "TRANS000273",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("273000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526326"),
+    sku: "TRANS000274",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("274000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526328"),
+    sku: "TRANS000275",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("275000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52632a"),
+    sku: "TRANS000276",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("276000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52632c"),
+    sku: "TRANS000277",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("277000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52632e"),
+    sku: "TRANS000278",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("278000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526330"),
+    sku: "TRANS000279",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("279000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526332"),
+    sku: "TRANS000280",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("280000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526334"),
+    sku: "TRANS000281",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("281000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526336"),
+    sku: "TRANS000282",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("282000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526338"),
+    sku: "TRANS000283",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("283000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52633a"),
+    sku: "TRANS000284",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("284000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52633c"),
+    sku: "TRANS000285",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("285000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52633e"),
+    sku: "TRANS000286",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("286000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526340"),
+    sku: "TRANS000287",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("287000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526342"),
+    sku: "TRANS000288",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("288000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526344"),
+    sku: "TRANS000289",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("289000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526346"),
+    sku: "TRANS000290",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("290000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526348"),
+    sku: "TRANS000291",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("291000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52634a"),
+    sku: "TRANS000292",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("292000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52634c"),
+    sku: "TRANS000293",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("293000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52634e"),
+    sku: "TRANS000294",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("294000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526350"),
+    sku: "TRANS000295",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("295000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526352"),
+    sku: "TRANS000296",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("296000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526354"),
+    sku: "TRANS000297",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("297000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526356"),
+    sku: "TRANS000298",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("298000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526358"),
+    sku: "TRANS000299",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("299000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52635a"),
+    sku: "TRANS000300",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("300000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52635c"),
+    sku: "TRANS000301",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("301000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52635e"),
+    sku: "TRANS000302",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("302000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526360"),
+    sku: "TRANS000303",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("303000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526362"),
+    sku: "TRANS000304",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("304000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526364"),
+    sku: "TRANS000305",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("305000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526366"),
+    sku: "TRANS000306",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("306000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526368"),
+    sku: "TRANS000307",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("307000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52636a"),
+    sku: "TRANS000308",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("308000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52636c"),
+    sku: "TRANS000309",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("309000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52636e"),
+    sku: "TRANS000310",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("310000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526370"),
+    sku: "TRANS000311",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("311000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526372"),
+    sku: "TRANS000312",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("312000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526374"),
+    sku: "TRANS000313",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("313000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526376"),
+    sku: "TRANS000314",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("314000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526378"),
+    sku: "TRANS000315",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("315000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52637a"),
+    sku: "TRANS000316",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("316000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52637c"),
+    sku: "TRANS000317",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("317000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52637e"),
+    sku: "TRANS000318",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("318000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526380"),
+    sku: "TRANS000319",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("319000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526382"),
+    sku: "TRANS000320",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("320000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526384"),
+    sku: "TRANS000321",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("321000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526386"),
+    sku: "TRANS000322",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("322000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526388"),
+    sku: "TRANS000323",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("323000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52638a"),
+    sku: "TRANS000324",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("324000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52638c"),
+    sku: "TRANS000325",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("325000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52638e"),
+    sku: "TRANS000326",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("326000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526390"),
+    sku: "TRANS000327",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("327000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526392"),
+    sku: "TRANS000328",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("328000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526394"),
+    sku: "TRANS000329",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("329000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526396"),
+    sku: "TRANS000330",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("330000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526398"),
+    sku: "TRANS000331",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("331000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52639a"),
+    sku: "TRANS000332",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("332000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52639c"),
+    sku: "TRANS000333",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("333000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52639e"),
+    sku: "TRANS000334",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("334000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263a0"),
+    sku: "TRANS000335",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("335000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263a2"),
+    sku: "TRANS000336",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("336000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263a4"),
+    sku: "TRANS000337",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("337000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263a6"),
+    sku: "TRANS000338",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("338000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263a8"),
+    sku: "TRANS000339",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("339000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263aa"),
+    sku: "TRANS000340",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("340000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ac"),
+    sku: "TRANS000341",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("341000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ae"),
+    sku: "TRANS000342",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("342000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263b0"),
+    sku: "TRANS000343",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("343000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263b2"),
+    sku: "TRANS000344",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("344000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263b4"),
+    sku: "TRANS000345",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("345000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263b6"),
+    sku: "TRANS000346",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("346000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263b8"),
+    sku: "TRANS000347",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("347000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ba"),
+    sku: "TRANS000348",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("348000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263bc"),
+    sku: "TRANS000349",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("349000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263be"),
+    sku: "TRANS000350",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("350000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263c0"),
+    sku: "TRANS000351",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("351000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263c2"),
+    sku: "TRANS000352",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("352000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263c4"),
+    sku: "TRANS000353",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("353000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263c6"),
+    sku: "TRANS000354",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("354000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263c8"),
+    sku: "TRANS000355",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("355000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ca"),
+    sku: "TRANS000356",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("356000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263cc"),
+    sku: "TRANS000357",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("357000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ce"),
+    sku: "TRANS000358",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("358000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263d0"),
+    sku: "TRANS000359",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("359000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263d2"),
+    sku: "TRANS000360",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("360000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263d4"),
+    sku: "TRANS000361",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("361000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263d6"),
+    sku: "TRANS000362",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("362000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263d8"),
+    sku: "TRANS000363",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("363000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263da"),
+    sku: "TRANS000364",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("364000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263dc"),
+    sku: "TRANS000365",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("365000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263de"),
+    sku: "TRANS000366",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("366000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263e0"),
+    sku: "TRANS000367",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("367000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263e2"),
+    sku: "TRANS000368",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("368000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263e4"),
+    sku: "TRANS000369",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("369000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263e6"),
+    sku: "TRANS000370",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("370000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263e8"),
+    sku: "TRANS000371",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("371000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ea"),
+    sku: "TRANS000372",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("372000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ec"),
+    sku: "TRANS000373",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("373000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263ee"),
+    sku: "TRANS000374",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("374000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263f0"),
+    sku: "TRANS000375",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("375000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263f2"),
+    sku: "TRANS000376",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("376000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263f4"),
+    sku: "TRANS000377",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("377000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263f6"),
+    sku: "TRANS000378",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("378000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263f8"),
+    sku: "TRANS000379",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("379000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263fa"),
+    sku: "TRANS000380",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("380000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263fc"),
+    sku: "TRANS000381",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("381000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5263fe"),
+    sku: "TRANS000382",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("382000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526400"),
+    sku: "TRANS000383",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("383000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526402"),
+    sku: "TRANS000384",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("384000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526404"),
+    sku: "TRANS000385",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("385000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526406"),
+    sku: "TRANS000386",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("386000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526408"),
+    sku: "TRANS000387",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("387000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52640a"),
+    sku: "TRANS000388",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("388000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52640c"),
+    sku: "TRANS000389",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("389000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52640e"),
+    sku: "TRANS000390",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("390000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526410"),
+    sku: "TRANS000391",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("391000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526412"),
+    sku: "TRANS000392",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("392000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526414"),
+    sku: "TRANS000393",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("393000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526416"),
+    sku: "TRANS000394",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("394000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526418"),
+    sku: "TRANS000395",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("395000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52641a"),
+    sku: "TRANS000396",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("396000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52641c"),
+    sku: "TRANS000397",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("397000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52641e"),
+    sku: "TRANS000398",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("398000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526420"),
+    sku: "TRANS000399",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("399000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526422"),
+    sku: "TRANS000400",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("400000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526424"),
+    sku: "TRANS000401",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("401000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526426"),
+    sku: "TRANS000402",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("402000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526428"),
+    sku: "TRANS000403",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("403000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52642a"),
+    sku: "TRANS000404",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("404000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52642c"),
+    sku: "TRANS000405",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("405000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52642e"),
+    sku: "TRANS000406",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("406000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526430"),
+    sku: "TRANS000407",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("407000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526432"),
+    sku: "TRANS000408",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("408000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526434"),
+    sku: "TRANS000409",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("409000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526436"),
+    sku: "TRANS000410",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("410000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526438"),
+    sku: "TRANS000411",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("411000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52643a"),
+    sku: "TRANS000412",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("412000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52643c"),
+    sku: "TRANS000413",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("413000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52643e"),
+    sku: "TRANS000414",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("414000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526440"),
+    sku: "TRANS000415",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("415000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526442"),
+    sku: "TRANS000416",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("416000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526444"),
+    sku: "TRANS000417",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("417000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526446"),
+    sku: "TRANS000418",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("418000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526448"),
+    sku: "TRANS000419",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("419000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52644a"),
+    sku: "TRANS000420",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("420000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52644c"),
+    sku: "TRANS000421",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("421000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52644e"),
+    sku: "TRANS000422",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("422000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526450"),
+    sku: "TRANS000423",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("423000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526452"),
+    sku: "TRANS000424",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("424000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526454"),
+    sku: "TRANS000425",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("425000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526456"),
+    sku: "TRANS000426",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("426000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526458"),
+    sku: "TRANS000427",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("427000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52645a"),
+    sku: "TRANS000428",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("428000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52645c"),
+    sku: "TRANS000429",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("429000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52645e"),
+    sku: "TRANS000430",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("430000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526460"),
+    sku: "TRANS000431",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("431000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526462"),
+    sku: "TRANS000432",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("432000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526464"),
+    sku: "TRANS000433",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("433000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526466"),
+    sku: "TRANS000434",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("434000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526468"),
+    sku: "TRANS000435",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("435000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52646a"),
+    sku: "TRANS000436",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("436000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52646c"),
+    sku: "TRANS000437",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("437000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52646e"),
+    sku: "TRANS000438",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("438000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526470"),
+    sku: "TRANS000439",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("439000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526472"),
+    sku: "TRANS000440",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("440000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526474"),
+    sku: "TRANS000441",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("441000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526476"),
+    sku: "TRANS000442",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("442000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526478"),
+    sku: "TRANS000443",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("443000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52647a"),
+    sku: "TRANS000444",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("444000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52647c"),
+    sku: "TRANS000445",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("445000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52647e"),
+    sku: "TRANS000446",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("446000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526480"),
+    sku: "TRANS000447",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("447000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526482"),
+    sku: "TRANS000448",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("448000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526484"),
+    sku: "TRANS000449",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("449000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526486"),
+    sku: "TRANS000450",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("450000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526488"),
+    sku: "TRANS000451",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("451000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52648a"),
+    sku: "TRANS000452",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("452000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52648c"),
+    sku: "TRANS000453",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("453000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52648e"),
+    sku: "TRANS000454",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("454000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526490"),
+    sku: "TRANS000455",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("455000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526492"),
+    sku: "TRANS000456",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("456000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526494"),
+    sku: "TRANS000457",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("457000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526496"),
+    sku: "TRANS000458",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("458000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c526498"),
+    sku: "TRANS000459",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("459000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52649a"),
+    sku: "TRANS000460",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("460000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52649c"),
+    sku: "TRANS000461",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("461000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c52649e"),
+    sku: "TRANS000462",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("462000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264a0"),
+    sku: "TRANS000463",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("463000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264a2"),
+    sku: "TRANS000464",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("464000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264a4"),
+    sku: "TRANS000465",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("465000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264a6"),
+    sku: "TRANS000466",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("466000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264a8"),
+    sku: "TRANS000467",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("467000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264aa"),
+    sku: "TRANS000468",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("468000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264ac"),
+    sku: "TRANS000469",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("469000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264ae"),
+    sku: "TRANS000470",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("470000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264b0"),
+    sku: "TRANS000471",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("471000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264b2"),
+    sku: "TRANS000472",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("472000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264b4"),
+    sku: "TRANS000473",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("473000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264b6"),
+    sku: "TRANS000474",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("474000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264b8"),
+    sku: "TRANS000475",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("475000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264ba"),
+    sku: "TRANS000476",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("476000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264bc"),
+    sku: "TRANS000477",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("477000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264be"),
+    sku: "TRANS000478",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("478000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264c0"),
+    sku: "TRANS000479",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("479000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264c2"),
+    sku: "TRANS000480",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("480000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264c4"),
+    sku: "TRANS000481",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("481000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264c6"),
+    sku: "TRANS000482",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("482000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264c8"),
+    sku: "TRANS000483",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("483000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264ca"),
+    sku: "TRANS000484",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("484000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883533a50e46114c5264cc"),
+    sku: "TRANS000485",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("485000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264ce"),
+    sku: "TRANS000486",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("486000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264d0"),
+    sku: "TRANS000487",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("487000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264d2"),
+    sku: "TRANS000488",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("488000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264d4"),
+    sku: "TRANS000489",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("489000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264d6"),
+    sku: "TRANS000490",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("490000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264d8"),
+    sku: "TRANS000491",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("491000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264da"),
+    sku: "TRANS000492",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("492000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264dc"),
+    sku: "TRANS000493",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("493000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264de"),
+    sku: "TRANS000494",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("494000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264e0"),
+    sku: "TRANS000495",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("495000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264e2"),
+    sku: "TRANS000496",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("496000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264e4"),
+    sku: "TRANS000497",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("497000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264e6"),
+    sku: "TRANS000498",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("498000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264e8"),
+    sku: "TRANS000499",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("499000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264ea"),
+    sku: "TRANS000500",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("500000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264ec"),
+    sku: "TRANS000501",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("501000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264ee"),
+    sku: "TRANS000502",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("502000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264f0"),
+    sku: "TRANS000503",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("503000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264f2"),
+    sku: "TRANS000504",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("504000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264f4"),
+    sku: "TRANS000505",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("505000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264f6"),
+    sku: "TRANS000506",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("506000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264f8"),
+    sku: "TRANS000507",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("507000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264fa"),
+    sku: "TRANS000508",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("508000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264fc"),
+    sku: "TRANS000509",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("509000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5264fe"),
+    sku: "TRANS000510",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("510000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526500"),
+    sku: "TRANS000511",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("511000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526502"),
+    sku: "TRANS000512",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("512000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526504"),
+    sku: "TRANS000513",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("513000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526506"),
+    sku: "TRANS000514",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("514000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526508"),
+    sku: "TRANS000515",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("515000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52650a"),
+    sku: "TRANS000516",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("516000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52650c"),
+    sku: "TRANS000517",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("517000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52650e"),
+    sku: "TRANS000518",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("518000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526510"),
+    sku: "TRANS000519",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("519000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526512"),
+    sku: "TRANS000520",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("520000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526514"),
+    sku: "TRANS000521",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("521000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526516"),
+    sku: "TRANS000522",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("522000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526518"),
+    sku: "TRANS000523",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("523000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52651a"),
+    sku: "TRANS000524",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("524000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52651c"),
+    sku: "TRANS000525",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("525000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52651e"),
+    sku: "TRANS000526",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("526000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526520"),
+    sku: "TRANS000527",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("527000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526522"),
+    sku: "TRANS000528",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("528000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526524"),
+    sku: "TRANS000529",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("529000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526526"),
+    sku: "TRANS000530",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("530000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526528"),
+    sku: "TRANS000531",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("531000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52652a"),
+    sku: "TRANS000532",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("532000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52652c"),
+    sku: "TRANS000533",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("533000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52652e"),
+    sku: "TRANS000534",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("534000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526530"),
+    sku: "TRANS000535",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("535000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526532"),
+    sku: "TRANS000536",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("536000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526534"),
+    sku: "TRANS000537",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("537000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526536"),
+    sku: "TRANS000538",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("538000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526538"),
+    sku: "TRANS000539",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("539000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52653a"),
+    sku: "TRANS000540",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("540000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52653c"),
+    sku: "TRANS000541",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("541000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52653e"),
+    sku: "TRANS000542",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("542000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526540"),
+    sku: "TRANS000543",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("543000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526542"),
+    sku: "TRANS000544",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("544000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526544"),
+    sku: "TRANS000545",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("545000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526546"),
+    sku: "TRANS000546",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("546000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526548"),
+    sku: "TRANS000547",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("547000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52654a"),
+    sku: "TRANS000548",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("548000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52654c"),
+    sku: "TRANS000549",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("549000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52654e"),
+    sku: "TRANS000550",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("550000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526550"),
+    sku: "TRANS000551",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("551000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526552"),
+    sku: "TRANS000552",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("552000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526554"),
+    sku: "TRANS000553",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("553000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526556"),
+    sku: "TRANS000554",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("554000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526558"),
+    sku: "TRANS000555",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("555000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52655a"),
+    sku: "TRANS000556",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("556000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52655c"),
+    sku: "TRANS000557",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("557000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52655e"),
+    sku: "TRANS000558",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("558000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526560"),
+    sku: "TRANS000559",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("559000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526562"),
+    sku: "TRANS000560",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("560000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526564"),
+    sku: "TRANS000561",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("561000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526566"),
+    sku: "TRANS000562",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("562000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526568"),
+    sku: "TRANS000563",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("563000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52656a"),
+    sku: "TRANS000564",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("564000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52656c"),
+    sku: "TRANS000565",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("565000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52656e"),
+    sku: "TRANS000566",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("566000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526570"),
+    sku: "TRANS000567",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("567000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526572"),
+    sku: "TRANS000568",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("568000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526574"),
+    sku: "TRANS000569",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("569000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526576"),
+    sku: "TRANS000570",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("570000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526578"),
+    sku: "TRANS000571",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("571000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52657a"),
+    sku: "TRANS000572",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("572000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52657c"),
+    sku: "TRANS000573",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("573000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52657e"),
+    sku: "TRANS000574",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("574000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526580"),
+    sku: "TRANS000575",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("575000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526582"),
+    sku: "TRANS000576",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("576000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526584"),
+    sku: "TRANS000577",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("577000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526586"),
+    sku: "TRANS000578",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("578000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526588"),
+    sku: "TRANS000579",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("579000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52658a"),
+    sku: "TRANS000580",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("580000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52658c"),
+    sku: "TRANS000581",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("581000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52658e"),
+    sku: "TRANS000582",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("582000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526590"),
+    sku: "TRANS000583",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("583000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526592"),
+    sku: "TRANS000584",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("584000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526594"),
+    sku: "TRANS000585",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("585000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526596"),
+    sku: "TRANS000586",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("586000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526598"),
+    sku: "TRANS000587",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("587000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52659a"),
+    sku: "TRANS000588",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("588000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52659c"),
+    sku: "TRANS000589",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("589000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52659e"),
+    sku: "TRANS000590",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("590000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265a0"),
+    sku: "TRANS000591",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("591000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265a2"),
+    sku: "TRANS000592",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("592000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265a4"),
+    sku: "TRANS000593",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("593000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265a6"),
+    sku: "TRANS000594",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("594000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265a8"),
+    sku: "TRANS000595",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("595000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265aa"),
+    sku: "TRANS000596",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("596000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ac"),
+    sku: "TRANS000597",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("597000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ae"),
+    sku: "TRANS000598",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("598000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265b0"),
+    sku: "TRANS000599",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("599000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265b2"),
+    sku: "TRANS000600",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("600000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265b4"),
+    sku: "TRANS000601",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("601000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265b6"),
+    sku: "TRANS000602",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("602000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265b8"),
+    sku: "TRANS000603",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("603000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ba"),
+    sku: "TRANS000604",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("604000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265bc"),
+    sku: "TRANS000605",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("605000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265be"),
+    sku: "TRANS000606",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("606000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265c0"),
+    sku: "TRANS000607",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("607000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265c2"),
+    sku: "TRANS000608",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("608000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265c4"),
+    sku: "TRANS000609",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("609000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265c6"),
+    sku: "TRANS000610",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("610000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265c8"),
+    sku: "TRANS000611",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("611000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ca"),
+    sku: "TRANS000612",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("612000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265cc"),
+    sku: "TRANS000613",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("613000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ce"),
+    sku: "TRANS000614",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("614000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265d0"),
+    sku: "TRANS000615",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("615000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265d2"),
+    sku: "TRANS000616",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("616000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265d4"),
+    sku: "TRANS000617",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("617000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265d6"),
+    sku: "TRANS000618",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("618000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265d8"),
+    sku: "TRANS000619",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("619000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265da"),
+    sku: "TRANS000620",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("620000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265dc"),
+    sku: "TRANS000621",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("621000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265de"),
+    sku: "TRANS000622",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("622000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265e0"),
+    sku: "TRANS000623",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("623000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265e2"),
+    sku: "TRANS000624",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("624000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265e4"),
+    sku: "TRANS000625",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("625000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265e6"),
+    sku: "TRANS000626",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("626000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265e8"),
+    sku: "TRANS000627",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("627000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ea"),
+    sku: "TRANS000628",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("628000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ec"),
+    sku: "TRANS000629",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("629000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265ee"),
+    sku: "TRANS000630",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("630000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265f0"),
+    sku: "TRANS000631",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("631000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265f2"),
+    sku: "TRANS000632",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("632000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265f4"),
+    sku: "TRANS000633",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("633000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265f6"),
+    sku: "TRANS000634",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("634000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265f8"),
+    sku: "TRANS000635",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("635000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265fa"),
+    sku: "TRANS000636",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("636000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265fc"),
+    sku: "TRANS000637",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("637000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c5265fe"),
+    sku: "TRANS000638",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("638000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526600"),
+    sku: "TRANS000639",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("639000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526602"),
+    sku: "TRANS000640",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("640000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526604"),
+    sku: "TRANS000641",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("641000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526606"),
+    sku: "TRANS000642",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("642000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526608"),
+    sku: "TRANS000643",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("643000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52660a"),
+    sku: "TRANS000644",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("644000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52660c"),
+    sku: "TRANS000645",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("645000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52660e"),
+    sku: "TRANS000646",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("646000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526610"),
+    sku: "TRANS000647",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("647000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526612"),
+    sku: "TRANS000648",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("648000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526614"),
+    sku: "TRANS000649",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("649000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526616"),
+    sku: "TRANS000650",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("650000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526618"),
+    sku: "TRANS000651",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("651000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52661a"),
+    sku: "TRANS000652",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("652000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52661c"),
+    sku: "TRANS000653",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("653000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52661e"),
+    sku: "TRANS000654",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("654000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526620"),
+    sku: "TRANS000655",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("655000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526622"),
+    sku: "TRANS000656",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("656000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526624"),
+    sku: "TRANS000657",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("657000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526626"),
+    sku: "TRANS000658",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("658000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526628"),
+    sku: "TRANS000659",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("659000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52662a"),
+    sku: "TRANS000660",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("660000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52662c"),
+    sku: "TRANS000661",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("661000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52662e"),
+    sku: "TRANS000662",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("662000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526630"),
+    sku: "TRANS000663",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("663000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526632"),
+    sku: "TRANS000664",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("664000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526634"),
+    sku: "TRANS000665",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("665000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526636"),
+    sku: "TRANS000666",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("666000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526638"),
+    sku: "TRANS000667",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("667000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52663a"),
+    sku: "TRANS000668",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("668000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52663c"),
+    sku: "TRANS000669",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("669000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52663e"),
+    sku: "TRANS000670",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("670000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526640"),
+    sku: "TRANS000671",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("671000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526642"),
+    sku: "TRANS000672",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("672000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526644"),
+    sku: "TRANS000673",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("673000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526646"),
+    sku: "TRANS000674",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("674000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526648"),
+    sku: "TRANS000675",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("675000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52664a"),
+    sku: "TRANS000676",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("676000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52664c"),
+    sku: "TRANS000677",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("677000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52664e"),
+    sku: "TRANS000678",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("678000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526650"),
+    sku: "TRANS000679",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("679000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526652"),
+    sku: "TRANS000680",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("680000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526654"),
+    sku: "TRANS000681",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("681000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526656"),
+    sku: "TRANS000682",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("682000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526658"),
+    sku: "TRANS000683",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("683000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52665a"),
+    sku: "TRANS000684",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("684000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52665c"),
+    sku: "TRANS000685",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("685000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52665e"),
+    sku: "TRANS000686",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("686000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526660"),
+    sku: "TRANS000687",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("687000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526662"),
+    sku: "TRANS000688",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("688000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526664"),
+    sku: "TRANS000689",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("689000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526666"),
+    sku: "TRANS000690",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("690000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526668"),
+    sku: "TRANS000691",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("691000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52666a"),
+    sku: "TRANS000692",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("692000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52666c"),
+    sku: "TRANS000693",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("693000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c52666e"),
+    sku: "TRANS000694",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("694000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526670"),
+    sku: "TRANS000695",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("695000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526672"),
+    sku: "TRANS000696",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("696000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526674"),
+    sku: "TRANS000697",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("697000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883534a50e46114c526676"),
+    sku: "TRANS000698",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("698000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526678"),
+    sku: "TRANS000699",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("699000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52667a"),
+    sku: "TRANS000700",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("700000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52667c"),
+    sku: "TRANS000701",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("701000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52667e"),
+    sku: "TRANS000702",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("702000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526680"),
+    sku: "TRANS000703",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("703000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526682"),
+    sku: "TRANS000704",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("704000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526684"),
+    sku: "TRANS000705",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("705000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526686"),
+    sku: "TRANS000706",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("706000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526688"),
+    sku: "TRANS000707",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("707000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52668a"),
+    sku: "TRANS000708",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("708000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52668c"),
+    sku: "TRANS000709",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("709000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52668e"),
+    sku: "TRANS000710",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("710000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526690"),
+    sku: "TRANS000711",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("711000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526692"),
+    sku: "TRANS000712",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("712000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526694"),
+    sku: "TRANS000713",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("713000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526696"),
+    sku: "TRANS000714",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("714000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526698"),
+    sku: "TRANS000715",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("715000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52669a"),
+    sku: "TRANS000716",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("716000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52669c"),
+    sku: "TRANS000717",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("717000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52669e"),
+    sku: "TRANS000718",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("718000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266a0"),
+    sku: "TRANS000719",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("719000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266a2"),
+    sku: "TRANS000720",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("720000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266a4"),
+    sku: "TRANS000721",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("721000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266a6"),
+    sku: "TRANS000722",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("722000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266a8"),
+    sku: "TRANS000723",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("723000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266aa"),
+    sku: "TRANS000724",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("724000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ac"),
+    sku: "TRANS000725",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("725000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ae"),
+    sku: "TRANS000726",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("726000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266b0"),
+    sku: "TRANS000727",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("727000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266b2"),
+    sku: "TRANS000728",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("728000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266b4"),
+    sku: "TRANS000729",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("729000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266b6"),
+    sku: "TRANS000730",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("730000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266b8"),
+    sku: "TRANS000731",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("731000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ba"),
+    sku: "TRANS000732",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("732000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266bc"),
+    sku: "TRANS000733",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("733000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266be"),
+    sku: "TRANS000734",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("734000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266c0"),
+    sku: "TRANS000735",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("735000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266c2"),
+    sku: "TRANS000736",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("736000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266c4"),
+    sku: "TRANS000737",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("737000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266c6"),
+    sku: "TRANS000738",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("738000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266c8"),
+    sku: "TRANS000739",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("739000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ca"),
+    sku: "TRANS000740",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("740000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266cc"),
+    sku: "TRANS000741",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("741000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ce"),
+    sku: "TRANS000742",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("742000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266d0"),
+    sku: "TRANS000743",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("743000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266d2"),
+    sku: "TRANS000744",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("744000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266d4"),
+    sku: "TRANS000745",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("745000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266d6"),
+    sku: "TRANS000746",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("746000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266d8"),
+    sku: "TRANS000747",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("747000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266da"),
+    sku: "TRANS000748",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("748000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266dc"),
+    sku: "TRANS000749",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("749000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266de"),
+    sku: "TRANS000750",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("750000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266e0"),
+    sku: "TRANS000751",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("751000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266e2"),
+    sku: "TRANS000752",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("752000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266e4"),
+    sku: "TRANS000753",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("753000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266e6"),
+    sku: "TRANS000754",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("754000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266e8"),
+    sku: "TRANS000755",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("755000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ea"),
+    sku: "TRANS000756",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("756000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ec"),
+    sku: "TRANS000757",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("757000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266ee"),
+    sku: "TRANS000758",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("758000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266f0"),
+    sku: "TRANS000759",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("759000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266f2"),
+    sku: "TRANS000760",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("760000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266f4"),
+    sku: "TRANS000761",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("761000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266f6"),
+    sku: "TRANS000762",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("762000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266f8"),
+    sku: "TRANS000763",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("763000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266fa"),
+    sku: "TRANS000764",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("764000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266fc"),
+    sku: "TRANS000765",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("765000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c5266fe"),
+    sku: "TRANS000766",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("766000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526700"),
+    sku: "TRANS000767",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("767000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526702"),
+    sku: "TRANS000768",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("768000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526704"),
+    sku: "TRANS000769",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("769000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526706"),
+    sku: "TRANS000770",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("770000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526708"),
+    sku: "TRANS000771",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("771000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52670a"),
+    sku: "TRANS000772",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("772000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52670c"),
+    sku: "TRANS000773",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("773000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52670e"),
+    sku: "TRANS000774",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("774000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526710"),
+    sku: "TRANS000775",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("775000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526712"),
+    sku: "TRANS000776",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("776000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526714"),
+    sku: "TRANS000777",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("777000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526716"),
+    sku: "TRANS000778",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("778000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526718"),
+    sku: "TRANS000779",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("779000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52671a"),
+    sku: "TRANS000780",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("780000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52671c"),
+    sku: "TRANS000781",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("781000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52671e"),
+    sku: "TRANS000782",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("782000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526720"),
+    sku: "TRANS000783",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("783000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526722"),
+    sku: "TRANS000784",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("784000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526724"),
+    sku: "TRANS000785",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("785000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526726"),
+    sku: "TRANS000786",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("786000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526728"),
+    sku: "TRANS000787",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("787000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52672a"),
+    sku: "TRANS000788",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("788000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52672c"),
+    sku: "TRANS000789",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("789000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52672e"),
+    sku: "TRANS000790",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("790000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526730"),
+    sku: "TRANS000791",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("791000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526732"),
+    sku: "TRANS000792",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("792000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526734"),
+    sku: "TRANS000793",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("793000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526736"),
+    sku: "TRANS000794",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("794000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526738"),
+    sku: "TRANS000795",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("795000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52673a"),
+    sku: "TRANS000796",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("796000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52673c"),
+    sku: "TRANS000797",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("797000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52673e"),
+    sku: "TRANS000798",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("798000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526740"),
+    sku: "TRANS000799",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("799000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526742"),
+    sku: "TRANS000800",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("800000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526744"),
+    sku: "TRANS000801",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("801000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526746"),
+    sku: "TRANS000802",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("802000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526748"),
+    sku: "TRANS000803",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("803000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52674a"),
+    sku: "TRANS000804",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("804000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52674c"),
+    sku: "TRANS000805",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("805000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52674e"),
+    sku: "TRANS000806",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("806000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526750"),
+    sku: "TRANS000807",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("807000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526752"),
+    sku: "TRANS000808",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("808000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526754"),
+    sku: "TRANS000809",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("809000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526756"),
+    sku: "TRANS000810",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("810000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526758"),
+    sku: "TRANS000811",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("811000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52675a"),
+    sku: "TRANS000812",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("812000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52675c"),
+    sku: "TRANS000813",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("813000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c52675e"),
+    sku: "TRANS000814",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("814000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526760"),
+    sku: "TRANS000815",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("815000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526762"),
+    sku: "TRANS000816",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("816000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883535a50e46114c526764"),
+    sku: "TRANS000817",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("817000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526766"),
+    sku: "TRANS000818",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("818000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526768"),
+    sku: "TRANS000819",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("819000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52676a"),
+    sku: "TRANS000820",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("820000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52676c"),
+    sku: "TRANS000821",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("821000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52676e"),
+    sku: "TRANS000822",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("822000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526770"),
+    sku: "TRANS000823",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("823000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526772"),
+    sku: "TRANS000824",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("824000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526774"),
+    sku: "TRANS000825",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("825000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526776"),
+    sku: "TRANS000826",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("826000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526778"),
+    sku: "TRANS000827",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("827000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52677a"),
+    sku: "TRANS000828",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("828000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52677c"),
+    sku: "TRANS000829",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("829000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52677e"),
+    sku: "TRANS000830",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("830000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526780"),
+    sku: "TRANS000831",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("831000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526782"),
+    sku: "TRANS000832",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("832000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526784"),
+    sku: "TRANS000833",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("833000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526786"),
+    sku: "TRANS000834",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("834000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526788"),
+    sku: "TRANS000835",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("835000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52678a"),
+    sku: "TRANS000836",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("836000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52678c"),
+    sku: "TRANS000837",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("837000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52678e"),
+    sku: "TRANS000838",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("838000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526790"),
+    sku: "TRANS000839",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("839000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526792"),
+    sku: "TRANS000840",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("840000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526794"),
+    sku: "TRANS000841",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("841000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526796"),
+    sku: "TRANS000842",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("842000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526798"),
+    sku: "TRANS000843",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("843000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52679a"),
+    sku: "TRANS000844",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("844000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52679c"),
+    sku: "TRANS000845",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("845000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52679e"),
+    sku: "TRANS000846",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("846000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267a0"),
+    sku: "TRANS000847",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("847000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267a2"),
+    sku: "TRANS000848",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("848000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267a4"),
+    sku: "TRANS000849",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("849000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267a6"),
+    sku: "TRANS000850",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("850000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267a8"),
+    sku: "TRANS000851",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("851000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267aa"),
+    sku: "TRANS000852",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("852000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ac"),
+    sku: "TRANS000853",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("853000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ae"),
+    sku: "TRANS000854",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("854000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267b0"),
+    sku: "TRANS000855",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("855000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267b2"),
+    sku: "TRANS000856",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("856000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267b4"),
+    sku: "TRANS000857",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("857000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267b6"),
+    sku: "TRANS000858",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("858000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267b8"),
+    sku: "TRANS000859",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("859000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ba"),
+    sku: "TRANS000860",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("860000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267bc"),
+    sku: "TRANS000861",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("861000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267be"),
+    sku: "TRANS000862",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("862000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267c0"),
+    sku: "TRANS000863",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("863000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267c2"),
+    sku: "TRANS000864",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("864000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267c4"),
+    sku: "TRANS000865",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("865000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267c6"),
+    sku: "TRANS000866",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("866000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267c8"),
+    sku: "TRANS000867",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("867000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ca"),
+    sku: "TRANS000868",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("868000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267cc"),
+    sku: "TRANS000869",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("869000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ce"),
+    sku: "TRANS000870",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("870000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267d0"),
+    sku: "TRANS000871",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("871000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267d2"),
+    sku: "TRANS000872",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("872000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267d4"),
+    sku: "TRANS000873",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("873000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267d6"),
+    sku: "TRANS000874",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("874000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267d8"),
+    sku: "TRANS000875",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("875000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267da"),
+    sku: "TRANS000876",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("876000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267dc"),
+    sku: "TRANS000877",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("877000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267de"),
+    sku: "TRANS000878",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("878000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267e0"),
+    sku: "TRANS000879",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("879000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267e2"),
+    sku: "TRANS000880",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("880000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267e4"),
+    sku: "TRANS000881",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("881000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267e6"),
+    sku: "TRANS000882",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("882000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267e8"),
+    sku: "TRANS000883",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("883000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ea"),
+    sku: "TRANS000884",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("884000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ec"),
+    sku: "TRANS000885",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("885000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267ee"),
+    sku: "TRANS000886",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("886000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267f0"),
+    sku: "TRANS000887",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("887000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267f2"),
+    sku: "TRANS000888",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("888000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267f4"),
+    sku: "TRANS000889",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("889000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267f6"),
+    sku: "TRANS000890",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("890000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267f8"),
+    sku: "TRANS000891",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("891000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267fa"),
+    sku: "TRANS000892",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("892000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267fc"),
+    sku: "TRANS000893",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("893000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c5267fe"),
+    sku: "TRANS000894",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("894000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526800"),
+    sku: "TRANS000895",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("895000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526802"),
+    sku: "TRANS000896",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("896000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526804"),
+    sku: "TRANS000897",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("897000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526806"),
+    sku: "TRANS000898",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("898000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526808"),
+    sku: "TRANS000899",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("899000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52680a"),
+    sku: "TRANS000900",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("900000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52680c"),
+    sku: "TRANS000901",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("901000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52680e"),
+    sku: "TRANS000902",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("902000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526810"),
+    sku: "TRANS000903",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("903000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526812"),
+    sku: "TRANS000904",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("904000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526814"),
+    sku: "TRANS000905",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("905000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526816"),
+    sku: "TRANS000906",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("906000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526818"),
+    sku: "TRANS000907",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("907000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52681a"),
+    sku: "TRANS000908",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("908000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52681c"),
+    sku: "TRANS000909",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("909000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52681e"),
+    sku: "TRANS000910",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("910000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526820"),
+    sku: "TRANS000911",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("911000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526822"),
+    sku: "TRANS000912",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("912000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526824"),
+    sku: "TRANS000913",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("913000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526826"),
+    sku: "TRANS000914",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("914000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526828"),
+    sku: "TRANS000915",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("915000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52682a"),
+    sku: "TRANS000916",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("916000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52682c"),
+    sku: "TRANS000917",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("917000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52682e"),
+    sku: "TRANS000918",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("918000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526830"),
+    sku: "TRANS000919",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("919000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526832"),
+    sku: "TRANS000920",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("920000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526834"),
+    sku: "TRANS000921",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("921000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526836"),
+    sku: "TRANS000922",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("922000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526838"),
+    sku: "TRANS000923",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("923000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52683a"),
+    sku: "TRANS000924",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("924000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52683c"),
+    sku: "TRANS000925",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("925000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52683e"),
+    sku: "TRANS000926",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("926000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526840"),
+    sku: "TRANS000927",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("927000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526842"),
+    sku: "TRANS000928",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("928000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526844"),
+    sku: "TRANS000929",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("929000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526846"),
+    sku: "TRANS000930",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("930000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526848"),
+    sku: "TRANS000931",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("931000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52684a"),
+    sku: "TRANS000932",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("932000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52684c"),
+    sku: "TRANS000933",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("933000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52684e"),
+    sku: "TRANS000934",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("934000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526850"),
+    sku: "TRANS000935",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("935000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526852"),
+    sku: "TRANS000936",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("936000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526854"),
+    sku: "TRANS000937",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("937000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526856"),
+    sku: "TRANS000938",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("938000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c526858"),
+    sku: "TRANS000939",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("939000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52685a"),
+    sku: "TRANS000940",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("940000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883536a50e46114c52685c"),
+    sku: "TRANS000941",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("941000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52685e"),
+    sku: "TRANS000942",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("942000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526860"),
+    sku: "TRANS000943",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("943000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526862"),
+    sku: "TRANS000944",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("944000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526864"),
+    sku: "TRANS000945",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("945000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526866"),
+    sku: "TRANS000946",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("946000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526868"),
+    sku: "TRANS000947",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("947000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52686a"),
+    sku: "TRANS000948",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("948000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52686c"),
+    sku: "TRANS000949",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("949000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52686e"),
+    sku: "TRANS000950",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("950000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526870"),
+    sku: "TRANS000951",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("951000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526872"),
+    sku: "TRANS000952",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("952000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526874"),
+    sku: "TRANS000953",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("953000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526876"),
+    sku: "TRANS000954",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("954000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526878"),
+    sku: "TRANS000955",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("955000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52687a"),
+    sku: "TRANS000956",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("956000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52687c"),
+    sku: "TRANS000957",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("957000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52687e"),
+    sku: "TRANS000958",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("958000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526880"),
+    sku: "TRANS000959",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("959000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526882"),
+    sku: "TRANS000960",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("960000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526884"),
+    sku: "TRANS000961",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("961000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526886"),
+    sku: "TRANS000962",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("962000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526888"),
+    sku: "TRANS000963",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("963000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52688a"),
+    sku: "TRANS000964",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("964000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52688c"),
+    sku: "TRANS000965",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("965000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52688e"),
+    sku: "TRANS000966",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("966000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526890"),
+    sku: "TRANS000967",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("967000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526892"),
+    sku: "TRANS000968",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("968000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526894"),
+    sku: "TRANS000969",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("969000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526896"),
+    sku: "TRANS000970",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("970000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c526898"),
+    sku: "TRANS000971",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("971000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52689a"),
+    sku: "TRANS000972",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("972000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52689c"),
+    sku: "TRANS000973",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("973000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c52689e"),
+    sku: "TRANS000974",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("974000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268a0"),
+    sku: "TRANS000975",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("975000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268a2"),
+    sku: "TRANS000976",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("976000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268a4"),
+    sku: "TRANS000977",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("977000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268a6"),
+    sku: "TRANS000978",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("978000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268a8"),
+    sku: "TRANS000979",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("979000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268aa"),
+    sku: "TRANS000980",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("980000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268ac"),
+    sku: "TRANS000981",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("981000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268ae"),
+    sku: "TRANS000982",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("982000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268b0"),
+    sku: "TRANS000983",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("983000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268b2"),
+    sku: "TRANS000984",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("984000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268b4"),
+    sku: "TRANS000985",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("985000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268b6"),
+    sku: "TRANS000986",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("986000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268b8"),
+    sku: "TRANS000987",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("987000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268ba"),
+    sku: "TRANS000988",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("988000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268bc"),
+    sku: "TRANS000989",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("989000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268be"),
+    sku: "TRANS000990",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("990000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268c0"),
+    sku: "TRANS000991",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("991000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268c2"),
+    sku: "TRANS000992",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("992000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268c4"),
+    sku: "TRANS000993",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("993000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268c6"),
+    sku: "TRANS000994",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("994000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268c8"),
+    sku: "TRANS000995",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("995000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268ca"),
+    sku: "TRANS000996",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("996000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268cc"),
+    sku: "TRANS000997",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("997000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268ce"),
+    sku: "TRANS000998",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("998000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268d0"),
+    sku: "TRANS000999",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("999000"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("transactions").insert([ {
+    _id: ObjectId("65883537a50e46114c5268d2"),
+    sku: "TRANS001000",
+    dateCreated: "2022-01-01",
+    amount: NumberInt("100000"),
+    __v: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for users
+// ----------------------------
+db.getCollection("users").drop();
+db.createCollection("users");
+
+// ----------------------------
+// Documents of users
+// ----------------------------
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b270ac9502bf1dc0f4e52"),
+    email: "nguyenkimdien02@gmail.com",
+    displayName: "Nguyễn Kim Điền",
+    password: "246357",
+    phone: "988162753",
+    avatar: "Iconarchive-Incognito-Animals-Rabbit-Avatar.512.png",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1M2IyNzBhYzk1MDJiZjFkYzBmNGU1MiIsImlhdCI6MTcwMzQ3OTMzMywiZXhwIjoxNzAzNTE1MzMzfQ.xklSQFeuxQmU5VAXlS6-9Zyc-MxtNfs4i_hNRGZeBlk"
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b270ac9502bf1dc0f4e53"),
+    email: "tranthithusuong@dienkim.vn",
+    displayName: "Trần Thị Thu Sương",
+    password: "246357",
+    phone: "912121212",
+    avatar: "Iconarchive-Incognito-Animals-Owl-Avatar.512.png",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1M2IyNzBhYzk1MDJiZjFkYzBmNGU1MyIsImlhdCI6MTcwMzQyNTI5MiwiZXhwIjoxNzAzNDYxMjkyfQ.Qi-pdfIbC6c7lnUmtlKQvYAsyOwmXyf_pl04fPYpc6w"
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b270ac9502bf1dc0f4e54"),
+    email: "nguyenthihuongv2@dienkim.vn",
+    displayName: "Nguyễn Thị Hương v2",
+    password: "246357",
+    phone: "9012345672",
+    avatar: "Iconarchive-Incognito-Animals-Mouse-Avatar.512.png",
+    token: ""
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b270ac9502bf1dc0f4e55"),
+    email: "dothitrinh@dienkim.vn",
+    displayName: "Đỗ Thị Trinh",
+    password: "246357",
+    phone: "956702341",
+    avatar: "Iconarchive-Incognito-Animals-Monkey-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b270ac9502bf1dc0f4e56"),
+    email: "tranthingocmai@dienkim.vn",
+    displayName: "Trần Thị Ngọc Mai",
+    password: "246357",
+    phone: "967082341",
+    avatar: "Iconarchive-Incognito-Animals-Meerkat-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e57"),
+    email: "lythuongkiet123@dienkim.vn",
+    displayName: "Lý Thường Kiệt",
+    password: "246357",
+    phone: "902345671",
+    avatar: "Iconarchive-Incognito-Animals-Mammoth-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e58"),
+    email: "lythaito@dienkim.vn",
+    displayName: "Lý Thái Tổ",
+    password: "246357",
+    phone: "956702381",
+    avatar: "Iconarchive-Incognito-Animals-Lion-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e59"),
+    email: "dienbienphu@dienkim.vn",
+    displayName: "Điện Biên Phủ",
+    password: "246357",
+    phone: "912356708",
+    avatar: "Iconarchive-Incognito-Animals-Leopard-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5a"),
+    email: "nguyenthaihoc@dienkim.vn",
+    displayName: "Nguyễn Thái Học",
+    password: "246357",
+    phone: "905678231",
+    avatar: "Iconarchive-Incognito-Animals-Koala-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5b"),
+    email: "tranthingocmai@dienkim.vn",
+    displayName: "Trần Thị Ngọc Mai",
+    password: "246357",
+    phone: "967082341",
+    avatar: "Iconarchive-Incognito-Animals-Meerkat-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5c"),
+    email: "buidinhcuong@dienkim.vn",
+    displayName: "Bùi Đình Cường",
+    password: "246357",
+    phone: "904567841",
+    avatar: "Iconarchive-Incognito-Animals-Lama-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5d"),
+    email: "buixuanthuan@dienkim.vn",
+    displayName: "Bùi Xuân Thuận",
+    password: "246357",
+    phone: "924567081",
+    avatar: "Iconarchive-Incognito-Animals-Kangaroo-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5e"),
+    email: "phamhonganh@dienkim.vn",
+    displayName: "Phạm Hồng Anh",
+    password: "246357",
+    phone: "945078231",
+    avatar: "Iconarchive-Incognito-Animals-Horse-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e5f"),
+    email: "dangvanthanh@dienkim.vn",
+    displayName: "Đặng Văn Thành",
+    password: "246357",
+    phone: "987023641",
+    avatar: "Iconarchive-Incognito-Animals-Hedgehog-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e60"),
+    email: "tranthingocmai@dienkim.vn",
+    displayName: "Trần Thị Ngọc Mai",
+    password: "246357",
+    phone: "967082341",
+    avatar: "Iconarchive-Incognito-Animals-Meerkat-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e61"),
+    email: "danghonganh@dienkim.vn",
+    displayName: "Đặng Hồng Anh",
+    password: "246357",
+    phone: "923456789",
+    avatar: "Iconarchive-Incognito-Animals-Gorilla-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("653b30fdc9502bf1dc0f4e68"),
+    email: "dinhbolinh@dienkim.vn",
+    displayName: "Đinh Bộ Lĩnh",
+    password: "246357",
+    phone: "902356781",
+    avatar: "Iconarchive-Incognito-Animals-Bison-Avatar.512.png",
+    token: null,
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("65439ed09ef09e15c8cc6974"),
+    email: "nguyenvanchien@dienkim.vn",
+    displayName: "Nguyễn Văn Chiến",
+    password: "246357",
+    phone: "0923574861",
+    avatar: "Martin-Berube-Character-Devil.256.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("65439f94b2edf562545d94e4"),
+    email: "ledinhhac@dienkim.vn",
+    displayName: "Lê Đình Hạc",
+    password: "246357",
+    phone: "0946782351",
+    avatar: "Iconarchive-Incognito-Animals-Rabbit-Avatar.512.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6543a0278b89575cbc7843aa"),
+    email: "buithidiem@dienkim.vn",
+    displayName: "Bùi Thị Diễm",
+    password: "246357",
+    phone: "0592134802",
+    avatar: "Iconarchive-Incognito-Animals-Owl-Avatar.512.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6543a22a13be458768d2e824"),
+    email: "luudinhnghe@gmail.com",
+    displayName: "Lưu Đình Nghệ",
+    password: "246357",
+    phone: "0926783451",
+    avatar: "Iconarchive-Incognito-Animals-Mouse-Avatar.512.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6543a2ac13be458768d2e82e"),
+    email: "buithiphi@dienkim.vn",
+    displayName: "Bùi Thị Phi",
+    password: "246357",
+    phone: "0234780157",
+    avatar: "Iconarchive-Incognito-Animals-Lion-Avatar.512.png",
+    __v: NumberInt("0")
+} ]);
