@@ -26,4 +26,4 @@
 
 # 9. Open Navicate restore database named my_gosource.js ./database/my_gosource.js
 
-# 10. Enter http://localhost:3000/admin/login username : nguyenkimdien02@gmail.com - password : 246357
+# 10. Enter localhost:3000/admin/login username : nguyenkimdien02@gmail.com - password : 246357
