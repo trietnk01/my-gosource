@@ -1,10 +1,10 @@
 /stack-fe/node_modules
 /stack-fe/build
-/stack-fe/.env
+
 
 /stack-be/node_modules
 /stack-be/build
-/stack-be/.env
+/.env
 
 
 .vscode/launch.json
