@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
 var asyncHandler = require("@middleware/async");
-var checkAuth = require("@middleware/auth");
+var checkAuthorization = require("@middleware/auth");
 var transactionModel = require("@models/transaction");
-// var redisClient = require("@helpers/redisClient");
+var redisClient = require("@helpers/redisClient");
 router.get(
 	"/list",
-	checkAuth,
+	checkAuthorization,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		let msg = "";
@@ -49,19 +49,19 @@ router.get(
 				$limit: perpage
 			}
 		]);
-		// const key = `transaction-${perpage}-${currentPage}`;
-		// let dataCached = await redisClient.get(key);
-		// if (dataCached) {
-		// 	items = JSON.parse(dataCached);
-		// } else {
-		// 	await redisClient.set(key, JSON.stringify(items));
-		// }
+		const key = `transaction-${perpage}-${currentPage}`;
+		let dataCached = await redisClient.get(key);
+		if (dataCached) {
+			items = JSON.parse(dataCached);
+		} else {
+			await redisClient.set(key, JSON.stringify(items));
+		}
 		res.status(200).json({ status, msg, items, total });
 	})
 );
 router.post(
 	"/create",
-	checkAuth,
+	checkAuthorization,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		let msg = "";
@@ -84,7 +84,7 @@ router.post(
 );
 router.patch(
 	"/update/:id",
-	checkAuth,
+	checkAuthorization,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		let msg = "";
@@ -103,7 +103,7 @@ router.patch(
 );
 router.get(
 	"/show/:id",
-	checkAuth,
+	checkAuthorization,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		let msg = "";
@@ -116,7 +116,7 @@ router.get(
 );
 router.post(
 	"/add",
-	checkAuth,
+	checkAuthorization,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		for (var i = 0; i < 1000; i++) {
