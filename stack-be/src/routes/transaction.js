@@ -1,15 +1,15 @@
 var express = require("express");
 var router = express.Router();
 var asyncHandler = require("@middleware/async");
-var checkAuthorization = require("@middleware/auth");
+var checkAuth = require("@middleware/auth");
 var transactionModel = require("@models/transaction");
 var redisClient = require("@helpers/redisClient");
 router.get(
 	"/list",
-	checkAuthorization,
+	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let items = [];
 		let total = 0;
 		let position = 0;
@@ -56,21 +56,21 @@ router.get(
 		} else {
 			await redisClient.set(key, JSON.stringify(items));
 		}
-		res.status(200).json({ status, msg, items, total });
+		res.status(200).json({ status, message, items, total });
 	})
 );
 router.post(
 	"/create",
-	checkAuthorization,
+	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let insertId = "";
 		const item = Object.assign({}, req.body);
 		const dataMatched = await transactionModel.find({ sku: item.sku });
 		if (dataMatched && dataMatched.length > 0) {
 			status = false;
-			msg = "Transaction is exist";
+			message = "Transaction is exist";
 		}
 		if (status) {
 			if (item.sku && item.dateCreated && item.amount) {
@@ -79,44 +79,44 @@ router.post(
 				insertId = itemCreated._id;
 			}
 		}
-		res.status(200).json({ status, msg, insertId });
+		res.status(200).json({ status, message, insertId });
 	})
 );
 router.patch(
 	"/update/:id",
-	checkAuthorization,
+	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let item = Object.assign({}, req.body);
 		const id = req.params.id ? req.params.id : "";
 		const dataMatched = await transactionModel.find({ sku: item.sku, _id: { $ne: id } });
 		if (dataMatched && dataMatched.length > 0) {
 			status = false;
-			msg = "Transaction is exist";
+			message = "Transaction is exist";
 		}
 		if (status) {
 			await transactionModel.updateOne({ _id: id }, item);
 		}
-		res.status(200).json({ status, msg });
+		res.status(200).json({ status, message });
 	})
 );
 router.get(
 	"/show/:id",
-	checkAuthorization,
+	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let item = null;
 		const params = Object.assign({}, req.params);
 		const id = params.id ? params.id : "";
 		item = await transactionModel.findOne({ _id: id });
-		res.status(200).json({ status, msg, item });
+		res.status(200).json({ status, message, item });
 	})
 );
 router.post(
 	"/add",
-	checkAuthorization,
+	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
 		for (var i = 0; i < 1000; i++) {

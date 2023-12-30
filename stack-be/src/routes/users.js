@@ -12,7 +12,7 @@ router.post(
 	"/login",
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let userItem = null;
 		const body = Object.assign({}, req.body);
 		const email = body.email;
@@ -20,7 +20,7 @@ router.post(
 		userItem = await usersModel.findOne({ $and: [{ email }, { password }] });
 		if (!userItem) {
 			status = false;
-			msg = "Login failure";
+			message = "Login failure";
 		} else {
 			let userId = userItem._id;
 			/* begin set random string */
@@ -39,7 +39,7 @@ router.post(
 		}
 		res.status(200).json({
 			status,
-			msg,
+			message,
 			user: userItem
 		});
 	})
@@ -48,17 +48,17 @@ router.post(
 	"/check-valid-token",
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let userItem = null;
 		const token = req.body.token;
 		userItem = await usersModel.findOne({ token });
 		if (!userItem) {
 			status = false;
-			msg = "Valid token failure";
+			message = "Valid token failure";
 		}
 		res.status(200).json({
 			status,
-			msg,
+			message,
 			user: userItem
 		});
 	})
@@ -68,11 +68,11 @@ router.post(
 	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let body = Object.assign({}, req.body);
 		const userId = body.userId;
 		await usersModel.updateOne({ _id: userId }, { token: null });
-		res.status(200).json({ status, msg });
+		res.status(200).json({ status, message });
 	})
 );
 router.get(
@@ -80,7 +80,7 @@ router.get(
 	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let items = [];
 		let total = 0;
 		const query = Object.assign({}, req.query);
@@ -112,7 +112,7 @@ router.get(
 				$limit: perpage
 			}
 		]);
-		res.status(200).json({ status, msg, items, total });
+		res.status(200).json({ status, message, items, total });
 	})
 );
 router.post(
@@ -121,7 +121,7 @@ router.post(
 	uploadImage.single("avatar"),
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let insertId = "";
 		const item = Object.assign({}, req.body);
 		if (req.file && req.file.originalname) {
@@ -130,14 +130,14 @@ router.post(
 		const dataMatched = await usersModel.find({ email: item.email });
 		if (dataMatched && dataMatched.length > 0) {
 			status = false;
-			msg = "User is exist";
+			message = "User is exist";
 		}
 		if (status) {
 			let model = new usersModel({ email: item.email, displayName: item.displayName, password: item.password, phone: item.phone, avatar: item.avatar });
 			const itemCreated = await model.save();
 			insertId = itemCreated._id;
 		}
-		res.status(200).json({ status, msg, insertId });
+		res.status(200).json({ status, message, insertId });
 	})
 );
 router.patch(
@@ -146,7 +146,7 @@ router.patch(
 	uploadImage.single("avatar"),
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let item = Object.assign({}, req.body);
 		const id = req.params.id ? req.params.id : "";
 		if (req.file && req.file.originalname) {
@@ -155,7 +155,7 @@ router.patch(
 		const dataMatched = await usersModel.find({ email: item.email, _id: { $ne: id } });
 		if (dataMatched && dataMatched.length > 0) {
 			status = false;
-			msg = "User is exist";
+			message = "User is exist";
 		}
 		if (status) {
 			await usersModel.updateOne({ _id: ObjectId(id) }, item);
@@ -168,7 +168,7 @@ router.patch(
 				}
 			}
 		}
-		res.status(200).json({ status, msg });
+		res.status(200).json({ status, message });
 	})
 );
 router.get(
@@ -176,12 +176,12 @@ router.get(
 	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		let item = null;
 		const params = Object.assign({}, req.params);
 		const id = params.id ? params.id : "";
 		item = await usersModel.findOne({ _id: ObjectId(id) });
-		res.status(200).json({ status, msg, item });
+		res.status(200).json({ status, message, item });
 	})
 );
 router.delete(
@@ -189,15 +189,15 @@ router.delete(
 	checkAuth,
 	asyncHandler(async (req, res) => {
 		let status = true;
-		let msg = "";
+		let message = "";
 		const params = Object.assign({}, req.params);
 		const userId = params.id;
 		const data = await usersModel.deleteOne({ _id: ObjectId(userId) });
 		if (parseInt(data.deletedCount) === 0) {
 			status = false;
-			msg = "No item deleted";
+			message = "No item deleted";
 		}
-		res.status(200).json({ status, msg });
+		res.status(200).json({ status, message });
 	})
 );
 module.exports = router;
