@@ -5,5 +5,5 @@
 
 /stack-be/node_modules
 /stack-be/build
-/stack-be/.env
+
 .vscode/launch.json
