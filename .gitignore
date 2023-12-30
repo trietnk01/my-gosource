@@ -7,4 +7,6 @@
 /stack-be/build
 /stack-be/.env
 
+/tester
+
 .vscode/launch.json
