@@ -60,5 +60,6 @@ volumes:
 # docker compose -p my-gosource up -d
 # docker volume ls
 # docker volume rm my-gosource_rediscache_volume
-# jenkins username : root - password : wQEvd@246357 - https://872d-1-53-19-150.ngrok-free.app
-# redis password : vdWE@246357
+# jenkins username : root - password : Jenkin@246357 - https://872d-1-53-19-150.ngrok-free.app
+# redis password : Redis@246357
+# docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/diennk/jenkins:/var/jenkins_home jenkins/jenkins:lts
