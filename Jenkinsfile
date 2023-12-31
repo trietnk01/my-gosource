@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages{
-        stage('Clone'){
+        stage('Clone stage'){
             steps{
                 git 'https://github.com/trietnk01/my-gosource.git'
             }
         }
-        stage('Clone stage'){
+        stage('Build stage'){
             steps{
                 withDockerRegistry(credentialsId: 'docker-hubv2', url: 'https://index.docker.io/v1/') {
                    sh label:'', script: 'docker build -t nguyenkimdien/my-gosource .'
