@@ -25,7 +25,7 @@ services:
       - rediscache_volume:/data
     ports:
       - 6379:6379
-    command: redis-server --save 20 1 --loglevel warning --requirepass vdWE@246357
+    command: redis-server --save 20 1 --loglevel warning --requirepass 246357
     networks:
       - bridge
   jenkins:
@@ -40,6 +40,35 @@ services:
       - jenkins_volume:/var/jenkins_home
     networks:
       - bridge
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+    container_name: elasticsearch_my_gosource
+    environment:
+      - node.name=elasticsearch
+      - cluster.initial_master_nodes=elasticsearch
+      - cluster.name=docker-cluster
+      - boostrap.memory_lock=true
+      - "ES_JAVA_OPTS=9-:-Xmx2g"
+      - LimitNOFILE=65536
+      - LimitMEMLOCK=infinity
+      - TimeoutStopSec=0
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+    volumes:
+      - elastic_search_volume:/usr/share/elasticsearch/data
+    networks:
+      - bridge
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.0.1
+    container_name: kibana_my_gosource
+    ports:
+      - 5601:5601
+    networks:
+      - bridge
 volumes:
   mongo_volume:
   rediscache_volume:
@@ -48,5 +77,4 @@ volumes:
 # docker compose -p my-gosource up -d
 # docker volume ls
 # docker volume rm my-gosource_rediscache_volume
-# jenkins username : root - password : wQEvd@246357 - https://872d-1-53-19-150.ngrok-free.app
-# redis password : vdWE@246357
+# jenkins username : root - password : wQEvd@246357

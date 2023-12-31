@@ -18,9 +18,9 @@ services:
     container_name: mongo_my_gosource
     image: mongo:latest
     environment:
-      MONGO_INITDB_DATABASE: my_gosource
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: gosource246357
+      - MONGO_INITDB_DATABASE=my_gosource
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=gosource246357
     ports:
       - 4200:27017
     networks:
