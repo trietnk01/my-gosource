@@ -10,7 +10,7 @@ pipeline {
             steps{
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
                    sh label:'', script: 'docker build -t nguyenkimdien/my-gosource .'
-                   sh label:'', script: 'docker push -t nguyenkimdien/my-gosource'
+                   sh label:'', script: 'docker push nguyenkimdien/my-gosource'
                 }
             }
         }
