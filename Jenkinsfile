@@ -9,8 +9,8 @@ pipeline {
         stage('Build stage'){
             steps{
                 withDockerRegistry(credentialsId: 'docker-hub-3', url: 'https://index.docker.io/v1/') {
-                   sh label:'', script: 'docker build -t nguyenkimdien/my-gosource .'
-                   sh label:'', script: 'docker push nguyenkimdien/my-gosource'                   
+                   sh label:'', script: 'docker build -t nguyenkimdien/my-gosource:v01 .'
+                   sh label:'', script: 'docker push nguyenkimdien/my-gosource:v01'                   
                 }
             }
         }
