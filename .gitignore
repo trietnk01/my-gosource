@@ -1,9 +1,5 @@
 /stack-fe/node_modules
 /stack-fe/build
-/stack-fe/.env.development
-/stack-fe/.env.production
-
 /stack-be/node_modules
 /stack-be/build
-/stack-be/.env
 .vscode/launch.json
