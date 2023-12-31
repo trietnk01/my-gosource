@@ -14,5 +14,13 @@ pipeline {
                 }
             }
         }
+        stage('SSH server'){
+            steps{
+                sshagent(['ssh-remote']) {
+                    sh 'ssh -o StrictHostKeyChecking=no -l diennk 14.225.219.196 touch test.txt'
+                }
+            }
+        }
+       
     }    
 }
