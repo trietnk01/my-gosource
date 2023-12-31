@@ -52,18 +52,6 @@ services:
     command: redis-server --save 20 1 --loglevel warning --requirepass vdWE@246357
     networks:
       - bridge
-  jenkins:
-    image: jenkins/jenkins:lts
-    restart: unless-stopped
-    privileged: true
-    user: root
-    ports:
-      - 8080:8080
-    container_name: jenkins_my_gosource
-    volumes:
-      - jenkins_volume:/var/jenkins_home
-    networks:
-      - bridge
 volumes:
   mongo_volume:
   rediscache_volume:
