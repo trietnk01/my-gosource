@@ -1,33 +1,10 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker-pineline'
-            }
-      }
-    stages {
-        stage('Build') {
-            steps {
-                echo "Building.."
-                sh '''
-                echo "doing build stuff.."
-                '''
+    agent any
+    stages{
+        stage('Clone'){
+            steps{
+                git 'https://github.com/trietnk01/my-gosource.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo "Testing.."
-                sh '''
-                echo "doing test stuff.."
-                '''
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
-            }
-        }
-    }
+    }    
 }
