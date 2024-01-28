@@ -1,2 +1,3 @@
 import DataTableLoading from "./DataTableLoading";
-export { DataTableLoading };
+import BoxChat from "./BoxChat";
+export { DataTableLoading, BoxChat };

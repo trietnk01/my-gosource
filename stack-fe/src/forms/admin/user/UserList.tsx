@@ -29,94 +29,49 @@ import { DataTableLoading } from "components";
 import NoAvatar from "assets/images/no-avatar.jpg";
 import Swal from "sweetalert2";
 import { END_POINT } from "configs";
-import { debounce } from "lodash";
-import MyPaginationGlobal from "ui-component/MyPaginationGlobal";
+import { useQuery } from "@apollo/client";
+import { getUsers } from "./gql";
 interface IUser {
-	_id: string;
-	displayName: string;
+	id: number;
+	name: string;
 	email: string;
 	phone: string;
 	avatar: string;
+	lang: string;
+	currency: string;
 }
-const PER_PAGE: number = 20;
-const NUMBER_ROWS: number[] = [20, 40, 60, 80, 100];
 const UserList = () => {
 	const navigate = useNavigate();
 	const theme = useTheme();
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	let mounted: boolean = true;
-	const [page, setPage] = React.useState<number>(0);
-	const [rowsPerPage, setRowsPerPage] = React.useState<number>(PER_PAGE);
-	const [totalItem, setTotalItem] = React.useState<number>(0);
 	const [search, setSearch] = React.useState<string>("");
 	const [rows, setRows] = React.useState<IUser[]>([]);
 	const [isLoading, setLoading] = React.useState<boolean>(true);
-	const [selected, setSelected] = React.useState<string[]>([]);
-	const isSelected = (id: string) => selected.indexOf(id) !== -1;
-	const loadData = (keyword: string, perpage: number) => {
-		axios
-			.get("/users/list", {
-				params: {
-					keyword: keyword ? keyword.trim() : undefined,
-					page: page + 1,
-					perpage
-				}
-			})
-			.then((res: any) => {
-				const { status, items, total } = res.data;
-				if (mounted) {
-					setLoading(false);
-					if (status) {
-						setRows(items);
-						setTotalItem(total);
-					}
-				}
-			})
-			.catch((err: any) => {
-				dispatch(
-					openSnackbar({
-						open: true,
-						message: t("Error system"),
-						anchorOrigin: { vertical: "bottom", horizontal: "left" },
-						variant: "alert",
-						alert: {
-							color: "error"
-						},
-						transition: "Fade",
-						close: false
-					})
-				);
-			});
+	const [selected, setSelected] = React.useState<number[]>([]);
+	const isSelected = (id: number) => selected.indexOf(id) !== -1;
+	const handleSearch = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement> | undefined) => {
+		const val: string = new String(e?.target.value).toString();
+		setSearch(val);
 	};
-	const debouncedSearch = React.useRef(
-		debounce((keyword: string) => {
-			mounted = true;
-			loadData(keyword, rowsPerPage);
-		}, 500)
-	).current;
-	React.useEffect(() => {
-		return () => {
-			debouncedSearch.cancel();
-		};
-	}, [debouncedSearch]);
-	React.useEffect(() => {
-		loadData(search, rowsPerPage);
-		return () => {
-			mounted = false;
-		};
-	}, [page, rowsPerPage]);
+	const { loading, error, data } = useQuery(getUsers, {
+		variables: { keyword: search }
+	});
+	console.log("data = ", data);
+
 	const handleSelectAllClick = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.checked) {
-			const newSelectedId = rows.map((n) => n._id);
+			const newSelectedId = rows.map((n) => n.id);
 			setSelected(newSelectedId!);
 			return;
 		}
 		setSelected([]);
 	};
-	const handleSelectedItem = (e: React.MouseEvent<HTMLTableHeaderCellElement, MouseEvent>, id: string) => {
+	const handleSelectedItem = (e: React.MouseEvent<HTMLTableHeaderCellElement, MouseEvent>, id: number) => {
 		const selectedIndex = selected.indexOf(id);
-		let newSelected: string[] = [];
+		let newSelected: number[] = [];
+
 		if (selectedIndex === -1) {
 			newSelected = newSelected.concat(selected, id);
 		} else if (selectedIndex === 0) {
@@ -128,24 +83,7 @@ const UserList = () => {
 		}
 		setSelected(newSelected);
 	};
-	const handleSearch = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement> | undefined) => {
-		let strSearch = event && event.target && event.target.value ? event.target.value.toString() : "";
-		setSearch(strSearch);
-		setPage(0);
-		setLoading(true);
-		setSelected([]);
-		debouncedSearch(strSearch);
-	};
-	const handleChangePage = (val: number) => {
-		setPage(val);
-		setLoading(true);
-	};
-	const handleChangeRowsPerPage = (val: number) => {
-		setRowsPerPage(val);
-		setPage(0);
-		setLoading(true);
-	};
-	const handleDelete = (id: string) => () => {
+	const handleDelete = (id: number) => () => {
 		Swal.fire({
 			icon: "warning",
 			title: t("Confirmed delete").toString() + "?",
@@ -172,7 +110,6 @@ const UserList = () => {
 								close: false
 							})
 						);
-						loadData(search, rowsPerPage);
 					} else {
 						dispatch(
 							openSnackbar({
@@ -212,11 +149,11 @@ const UserList = () => {
 				{rows && rows.length > 0 ? (
 					<React.Fragment>
 						{rows.map((elmt: IUser, idx: number) => {
-							const isItemSelected = isSelected(elmt._id);
+							const isItemSelected = isSelected(elmt.id);
 							const labelId = `enhanced-table-checkbox-${idx}`;
 							return (
 								<TableRow hover key={`user-idx-${idx}`}>
-									<TableCell onClick={(event) => handleSelectedItem(event, elmt._id)}>
+									<TableCell onClick={(event) => handleSelectedItem(event, elmt.id)}>
 										<Checkbox
 											color="primary"
 											checked={isItemSelected}
@@ -229,13 +166,13 @@ const UserList = () => {
 										<Avatar src={elmt.avatar ? END_POINT.URL_SERVER + `/images/` + elmt.avatar : NoAvatar} />
 									</TableCell>
 									<TableCell>{elmt.email}</TableCell>
-									<TableCell>{elmt.displayName}</TableCell>
+									<TableCell>{elmt.name}</TableCell>
 									<TableCell>{elmt.phone}</TableCell>
 									<TableCell>
-										<IconButton color="inherit" onClick={() => navigate(`/admin/user/edit/${elmt._id}`)}>
+										<IconButton color="inherit" onClick={() => navigate(`/admin/user/edit/${elmt.id}`)}>
 											<EditTwoToneIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
-										<IconButton color="inherit" onClick={handleDelete(elmt._id)}>
+										<IconButton color="inherit" onClick={handleDelete(elmt.id)}>
 											<DeleteOutlineIcon sx={{ fontSize: "1.3rem" }} />
 										</IconButton>
 									</TableCell>
@@ -313,14 +250,6 @@ const UserList = () => {
 						</TableBody>
 					</Table>
 				</TableContainer>
-				<MyPaginationGlobal
-					numberRowsArr={NUMBER_ROWS}
-					rowsPerPage={rowsPerPage}
-					page={page}
-					totalRow={totalItem}
-					handleChangePage={handleChangePage}
-					handleChangeRowsPerPage={handleChangeRowsPerPage}
-				/>
 			</Box>
 		</Card>
 	);

@@ -4,16 +4,18 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 
+// ==============================|| DASHBOARD MENU ITEMS ||============================== //
+
 interface UserMenuProps {
 	id: string;
 	title: React.ReactNode;
 	url: string;
 }
 
-const user: UserMenuProps = {
+const dashboard: UserMenuProps = {
 	id: "user",
 	title: <FormattedMessage id="User" />,
 	url: "/admin/user/list"
 };
 
-export default user;
+export default dashboard;

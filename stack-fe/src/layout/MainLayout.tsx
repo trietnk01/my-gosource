@@ -7,15 +7,19 @@ import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import { END_POINT } from "configs";
+import { END_POINT, FIREBASE_CONFIG, socket } from "configs";
+import { initializeApp } from "firebase/app";
+import { getDatabase, onValue, ref, update, get, child } from "firebase/database";
 import useAuth from "hooks/useAuth";
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "store";
 import { toggleDrawer } from "store/slices/drawer";
+import { openSnackbar } from "store/slices/snackbar";
+import axios from "utils/axios";
 import Sidebar from "./Sidebar";
 interface IUser {
-	_id: string;
+	id: number;
 	displayName: string;
 	email: string;
 	phone: string;
@@ -90,7 +94,7 @@ const MainLayout = () => {
 		setAnchorEl(null);
 	};
 	const handleLogout = () => {
-		logout(user && user._id ? user._id : "");
+		logout(user && user.id ? user.id : "");
 	};
 	const renderMenu = (
 		<Menu
@@ -112,6 +116,14 @@ const MainLayout = () => {
 			<MenuItem onClick={handleLogout}>{t("Logout")}</MenuItem>
 		</Menu>
 	);
+	React.useEffect(() => {
+		socket.on("connect", () => {});
+		socket.on("disconnect", () => {});
+		return () => {
+			socket.off("connect", () => {});
+			socket.off("disconnect", () => {});
+		};
+	}, []);
 	return (
 		<Box display="flex">
 			<CssBaseline />

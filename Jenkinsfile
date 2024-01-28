@@ -1,26 +1,33 @@
 pipeline {
-    agent any
-    stages{
-        stage('Clone stage'){
-            steps{
-                git 'https://github.com/trietnk01/my-gosource.git'
+    agent { 
+        node {
+            label 'docker-pineline'
+            }
+      }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building.."
+                sh '''
+                echo "doing build stuff.."
+                '''
             }
         }
-        stage('Build stage'){
-            steps{
-                withDockerRegistry(credentialsId: 'docker-hub-3', url: 'https://index.docker.io/v1/') {
-                   sh label:'', script: 'docker build -t nguyenkimdien/my-gosource:v01 .'
-                   sh label:'', script: 'docker push nguyenkimdien/my-gosource:v01'                   
-                }
+        stage('Test') {
+            steps {
+                echo "Testing.."
+                sh '''
+                echo "doing test stuff.."
+                '''
             }
         }
-        stage('SSH server'){
-            steps{
-                sshagent(['ssh-remote-2']) {
-                    sh 'ssh -o StrictHostKeyChecking=no -l root 14.225.219.196 touch test.txt'
-                }
+        stage('Deliver') {
+            steps {
+                echo 'Deliver....'
+                sh '''
+                echo "doing delivery stuff.."
+                '''
             }
         }
-       
-    }    
+    }
 }

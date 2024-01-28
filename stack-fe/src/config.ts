@@ -11,9 +11,9 @@ export const FIREBASE_API = {
 };
 
 const config: ConfigProps = {
-	locale: "vi", // 'en' - English, 'fr' - French, 'ro' - Romanian, 'zh' - Chinese
-	currency: "VND",
-	dateFormat: "dd/MM/yyyy"
+	locale: "en", // 'en' - English, 'fr' - French, 'ro' - Romanian, 'zh' - Chinese
+	currency: "USD",
+	dateFormat: "MM/dd/yyyy"
 };
 
 export default config;

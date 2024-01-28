@@ -12,7 +12,7 @@ import auth_service from "./authService";
 import { DefaultRootStateProps } from "types";
 
 const item_axios: DefaultRootStateProps["axios"] = {
-	baseURL: END_POINT.API_ENDPOINT ? END_POINT.API_ENDPOINT : "",
+	baseURL: process.env.REACT_APP_PRODUCT_URL ? process.env.REACT_APP_PRODUCT_URL : "",
 	timeout: 100000
 };
 const axiosServices = axios.create(item_axios);

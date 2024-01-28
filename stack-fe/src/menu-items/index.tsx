@@ -1,9 +1,8 @@
 import { DefaultRootStateProps } from "types";
 import dashboard from "./dashboard";
-import user from "./user";
-import transaction from "./transaction";
+import product from "./product";
 // ==============================|| MENU ITEMS ||============================== //
 
-const menuItems: DefaultRootStateProps["NavItemType"][] = [dashboard, user, transaction];
+const menuItems: DefaultRootStateProps["NavItemType"][] = [dashboard, product];
 
 export { menuItems };

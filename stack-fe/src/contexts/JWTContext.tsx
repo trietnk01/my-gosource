@@ -7,6 +7,8 @@ import { LOGIN, LOGOUT } from "store/actions";
 import { openSnackbar } from "store/slices/snackbar";
 import { InitialLoginContextProps, JWTContextType } from "types/auth";
 // project imports
+import { useMutation } from "@apollo/client";
+import { checkValidTokenMutation, loginMutation, logoutMutation } from "graphql-client/mutations";
 import useConfig from "hooks/useConfig";
 import { store } from "store";
 import { DefaultRootStateProps } from "types";
@@ -27,67 +29,46 @@ const JWTProvider: React.FC<React.PropsWithChildren<JWTProviderProps>> = ({ chil
 	const [state, dispatch] = useReducer(accountReducer, initialState);
 	const { onChangeLocale, onChangeCurrency, onChangeDateFormat } = useConfig();
 	const { i18n, t } = useTranslation();
+	const [loginUser] = useMutation(loginMutation);
+	const [logoutUser] = useMutation(logoutMutation);
+	const [checkValidTokenUser] = useMutation(checkValidTokenMutation);
 	useEffect(() => {
-		const init = () => {
+		const init = async () => {
 			const accessToken: string = auth_service.getAccessToken();
-			const checkedTokenParams: any = {
-				token: accessToken
-			};
 			if (accessToken) {
-				axios
-					.post("/users/check-valid-token", checkedTokenParams)
-					.then((res: any) => {
-						const { status, user } = res.data;
-						if (status) {
-							const userItem: DefaultRootStateProps["user_profile"] | null = user;
-							if (userItem) {
-								const lang: string = "vi";
-								i18n.changeLanguage(lang);
-								dispatch({
-									type: LOGIN,
-									payload: {
-										isLoggedIn: true,
-										user: userItem
-									}
-								});
+				const res: any = await checkValidTokenUser({ variables: { token: accessToken } });
+				const { status, item } = res.data.checkValidToken;
+				if (status) {
+					const userItem: DefaultRootStateProps["user_profile"] | null = item;
+					if (userItem) {
+						const lang: string = "en";
+						i18n.changeLanguage(lang);
+						dispatch({
+							type: LOGIN,
+							payload: {
+								isLoggedIn: true,
+								user: userItem
 							}
-						} else {
-							delete axios.defaults.headers.common.Authorization;
-							auth_service.clearAccessToken();
-							dispatch({ type: LOGOUT });
-							store.dispatch(
-								openSnackbar({
-									open: true,
-									message: t("Invalid token"),
-									anchorOrigin: { vertical: "bottom", horizontal: "left" },
-									variant: "alert",
-									alert: {
-										color: "error"
-									},
-									transition: "Fade",
-									close: false
-								})
-							);
-						}
-					})
-					.catch((err: any) => {
-						delete axios.defaults.headers.common.Authorization;
-						auth_service.clearAccessToken();
-						dispatch({ type: LOGOUT });
-						store.dispatch(
-							openSnackbar({
-								open: true,
-								message: t("Error system"),
-								anchorOrigin: { vertical: "bottom", horizontal: "left" },
-								variant: "alert",
-								alert: {
-									color: "error"
-								},
-								transition: "Fade",
-								close: false
-							})
-						);
-					});
+						});
+					}
+				} else {
+					delete axios.defaults.headers.common.Authorization;
+					auth_service.clearAccessToken();
+					dispatch({ type: LOGOUT });
+					store.dispatch(
+						openSnackbar({
+							open: true,
+							message: t("Invalid token"),
+							anchorOrigin: { vertical: "bottom", horizontal: "left" },
+							variant: "alert",
+							alert: {
+								color: "error"
+							},
+							transition: "Fade",
+							close: false
+						})
+					);
+				}
 			} else {
 				delete axios.defaults.headers.common.Authorization;
 				auth_service.clearAccessToken();
@@ -96,20 +77,21 @@ const JWTProvider: React.FC<React.PropsWithChildren<JWTProviderProps>> = ({ chil
 		};
 		init();
 	}, []);
+
 	const login = async (email: string, password: string) => {
-		let params: any = {
-			email,
-			password
-		};
-		const res: any = await axios.post("/users/login", params, { headers: { isShowLoading: true } });
-		const { status, user } = res.data;
+		const res: any = await loginUser({
+			variables: {
+				email,
+				password
+			}
+		});
+		const { status, item } = res.data.login;
 		if (status) {
-			let userItem: DefaultRootStateProps["user_profile"] | null = user;
-			let token: string = userItem && userItem.token ? userItem.token : "";
+			let userItem: DefaultRootStateProps["user_profile"] | null = item;
 			if (userItem) {
-				auth_service.setAccessToken(token);
-				const lang: string = "vi";
-				const currency: string = "VND";
+				auth_service.setAccessToken(item.token);
+				const lang: string = "en";
+				const currency: string = "USD";
 				const dateFormat: string = "dd/MM/yyyy";
 				onChangeLocale(lang);
 				onChangeCurrency(currency);
@@ -153,35 +135,18 @@ const JWTProvider: React.FC<React.PropsWithChildren<JWTProviderProps>> = ({ chil
 		}
 	};
 
-	const logout = (userId: string) => {
-		const params = {
-			userId
-		};
-		axios
-			.post(`/users/logout`, params, { headers: { isShowLoading: true } })
-			.then((res: any) => {
-				const { status } = res.data;
-				if (status) {
-					delete axios.defaults.headers.common.Authorization;
-					auth_service.clearAccessToken();
-					dispatch({ type: LOGOUT });
-				}
-			})
-			.catch((err: any) => {
-				store.dispatch(
-					openSnackbar({
-						open: true,
-						message: t("Error system"),
-						anchorOrigin: { vertical: "bottom", horizontal: "left" },
-						variant: "alert",
-						alert: {
-							color: "error"
-						},
-						transition: "Fade",
-						close: false
-					})
-				);
-			});
+	const logout = async (id: string) => {
+		const res: any = await logoutUser({
+			variables: {
+				id
+			}
+		});
+		const { status } = res.data.logout;
+		if (status) {
+			delete axios.defaults.headers.common.Authorization;
+			auth_service.clearAccessToken();
+			dispatch({ type: LOGOUT });
+		}
 	};
 
 	if (state.isInitialized !== undefined && !state.isInitialized) {

@@ -6,10 +6,12 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+const { ApolloServer } = require("apollo-server-express");
+const { Server } = require("socket.io");
 require("module-alias/register");
 const mongoose = require("mongoose");
-var apiRoute = require("@routes/api")();
-const errorHandler = require("@middleware/error");
+const typeDefs = require("@schemas");
+const resolvers = require("@resolvers");
 let port = process.env.NODE_ENV === "development" ? process.env.PORT_DEV : process.env.PORT_PRODUCTION;
 let host = process.env.NODE_ENV === "development" ? process.env.DB_HOST_DEV : process.env.DB_HOST_PRODUCTION;
 let username = process.env.DB_USERNAME;
@@ -38,8 +40,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
-app.use("/api", apiRoute);
 app.set("port", port);
-app.use(errorHandler);
 var serverHttp = http.createServer(app);
+const io = new Server(serverHttp, {
+	cors: { origin: "*" }
+});
+let serverApollo = null;
+const serverApolloStart = async () => {
+	serverApollo = new ApolloServer({
+		typeDefs,
+		resolvers
+	});
+	await serverApollo.start();
+	serverApollo.applyMiddleware({ app });
+};
+serverApolloStart();
 serverHttp.listen(port);

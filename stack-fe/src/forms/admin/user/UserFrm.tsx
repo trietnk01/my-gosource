@@ -28,7 +28,7 @@ interface IFormInput {
 	avatar: string;
 }
 interface IUser {
-	id: string;
+	id: number;
 	email: string;
 	password: string;
 	displayName: string;
@@ -151,16 +151,16 @@ const UserFrm = () => {
 						break;
 					case "UPDATE":
 						if (id) {
-							res = await axios.patch(`/users/update/${id.toString()}`, frmData, {
+							res = await axios.put(`/users/update/${parseInt(id.toString())}`, frmData, {
 								headers: { isShowLoading: true, ContentType: "multipart/form-data" }
 							});
 						}
 						break;
 				}
-				const { status, insertId } = res.data;
+				const { status, insert_id } = res.data;
 				if (status) {
 					if (action === "CREATE") {
-						navigate(`/admin/user/edit/${insertId}`);
+						navigate(`/admin/user/edit/${insert_id}`);
 					} else {
 						setValue("password", "");
 						setValue("password_confirmed", "");
@@ -218,7 +218,7 @@ const UserFrm = () => {
 				let phone: string = "";
 				let avatar: string = "";
 				if (id) {
-					const res: any = await axios.get(`/users/show/${id.toString()}`, { headers: { isShowLoading: true } });
+					const res: any = await axios.get(`/users/show/${parseInt(id.toString())}`, { headers: { isShowLoading: true } });
 					const { status, item } = res.data;
 					if (status) {
 						const userElmt: IUser = item ? item : null;

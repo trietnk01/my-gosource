@@ -15,14 +15,13 @@ export type FirebaseContextType = {
 	updateProfile: VoidFunction;
 };
 export type UserProfile = {
-	_id: string;
+	id: string;
 	displayName: string;
 	email: string;
 	phone: string;
 	avatar: string;
 	lang: string;
 	currency: string;
-	token: string | null;
 };
 
 export type JWTContextType = {

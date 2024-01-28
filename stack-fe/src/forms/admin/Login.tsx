@@ -15,6 +15,7 @@ const Login = () => {
 	const { login } = useAuth();
 	const navigate = useNavigate();
 	const theme = useTheme();
+
 	const schema = yup
 		.object({
 			email: yup.string().required(t("Field required").toString()),
@@ -38,8 +39,8 @@ const Login = () => {
 		},
 		resolver: yupResolver(schema)
 	});
-	const onSubmit: SubmitHandler<IFormInput> = (dataForm) => {
-		login(dataForm.email.toString(), dataForm.password.toString());
+	const onSubmit: SubmitHandler<IFormInput> = async (dataForm) => {
+		login(dataForm.email.toString().trim(), dataForm.password.toString());
 	};
 	const handleBackHomepage = () => {
 		navigate("/");
